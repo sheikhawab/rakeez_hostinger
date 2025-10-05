@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Rakeez Solutions",
+    "subtitle": "Your Partner in Digital Excellence",
+    "description": "Professional website development and software services"
+  }
+}

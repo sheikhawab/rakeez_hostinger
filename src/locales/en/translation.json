@@ -1,0 +1,285 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Rakeez Solutions",
+    "subtitle": "Your Partner in Digital Excellence",
+    "description": "We transform ideas into powerful digital solutions. Professional website development and custom software services tailored to your business needs.",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "View Our Work"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Digital Solutions",
+    "description": "We offer end-to-end digital services to help your business thrive in the modern world",
+    "ctaText": "Ready to transform your business? Let's discuss your project",
+    "webDevelopment": {
+      "title": "Website Development",
+      "description": "Modern, responsive websites built with cutting-edge technologies to establish your online presence.",
+      "customWebsites": "Custom Website Design",
+      "ecommerce": "E-Commerce Platforms",
+      "cms": "Content Management Systems"
+    },
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "description": "Tailored software solutions designed to streamline operations and boost productivity.",
+      "customSoftware": "Custom Software Solutions",
+      "mobileApps": "Mobile Applications",
+      "desktopApps": "Desktop Applications"
+    },
+    "uiuxDesign": {
+      "title": "UI/UX Design",
+      "description": "Beautiful, intuitive interfaces designed with your users in mind to maximize engagement.",
+      "userInterfaces": "User Interface Design",
+      "prototyping": "Prototyping & Wireframing",
+      "designSystems": "Design Systems"
+    },
+    "digitalConsulting": {
+      "title": "Digital Consulting",
+      "description": "Strategic guidance to navigate your digital transformation journey successfully.",
+      "digitalTransformation": "Digital Transformation",
+      "techStrategy": "Technology Strategy",
+      "businessAnalysis": "Business Analysis"
+    },
+    "maintenanceSupport": {
+      "title": "Maintenance & Support",
+      "description": "Comprehensive support services to keep your digital assets running smoothly 24/7.",
+      "support247": "24/7 Technical Support",
+      "updates": "Regular Updates & Patches",
+      "optimization": "Performance Optimization"
+    },
+    "cloudSolutions": {
+      "title": "Cloud Solutions",
+      "description": "Scalable cloud infrastructure and migration services for modern businesses.",
+      "cloudMigration": "Cloud Migration",
+      "hosting": "Cloud Hosting & Management",
+      "devops": "DevOps & CI/CD"
+    },
+    "webDev": {
+      "title": "Website Development",
+      "description": "Modern, responsive websites built with cutting-edge technologies. From landing pages to complex web applications."
+    },
+    "customSoftware": {
+      "title": "Custom Software Development",
+      "description": "Tailored software solutions designed to streamline your business processes and boost productivity."
+    },
+    "mobileApps": {
+      "title": "Mobile Applications",
+      "description": "Native and cross-platform mobile apps that deliver exceptional user experiences on iOS and Android."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "Beautiful, intuitive interfaces designed with your users in mind. We create experiences that convert."
+    },
+    "ecommerce": {
+      "title": "E-Commerce Solutions",
+      "description": "Complete online store solutions with payment integration, inventory management, and analytics."
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "description": "Expert guidance on technology strategy, architecture decisions, and digital transformation."
+    }
+  },
+  "about": {
+    "title": "About Rakeez Solutions",
+    "subtitle": "Building Digital Excellence Since Day One",
+    "description": "We are a team of passionate developers, designers, and digital strategists committed to delivering exceptional results. Our mission is to help businesses thrive in the digital age through innovative technology solutions.",
+    "mission": "Our Mission",
+    "missionText": "To empower businesses with cutting-edge digital solutions that drive growth and innovation.",
+    "vision": "Our Vision",
+    "visionText": "To be the leading technology partner for businesses seeking digital transformation.",
+    "values": "Our Values",
+    "valuesText": "Excellence, Innovation, Integrity, and Client Success",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "years": "Years of Experience",
+      "satisfaction": "Client Satisfaction"
+    },
+    "journeyTitle": "Our Journey",
+    "expertiseTitle": "Our Expertise",
+    "timeline": {
+      "2020": {
+        "title": "Foundation",
+        "description": "Rakeez Solutions was founded with a vision to deliver exceptional digital experiences"
+      },
+      "2021": {
+        "title": "Growth & Expansion",
+        "description": "Expanded our team and successfully delivered 50+ projects across various industries"
+      },
+      "2023": {
+        "title": "Innovation Leader",
+        "description": "Became a recognized leader in cloud solutions and digital transformation"
+      },
+      "2025": {
+        "title": "Global Reach",
+        "description": "Serving clients worldwide with cutting-edge technology solutions"
+      }
+    }
+  },
+  "features": {
+    "badge": "Why Choose Us",
+    "title": "Built for Excellence",
+    "subtitle": "We combine innovation with reliability to deliver solutions that exceed expectations",
+    "fastDelivery": {
+      "title": "Fast Delivery",
+      "description": "Agile methodology ensures rapid development and deployment without compromising quality"
+    },
+    "support247": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock technical support to keep your business running smoothly"
+    },
+    "modernTech": {
+      "title": "Modern Technologies",
+      "description": "Latest frameworks and tools for future-proof, scalable solutions"
+    },
+    "scalable": {
+      "title": "Scalable Solutions",
+      "description": "Architecture designed to grow with your business, from startup to enterprise"
+    },
+    "pricing": {
+      "title": "Competitive Pricing",
+      "description": "Transparent, value-driven pricing with no hidden costs or surprises"
+    },
+    "agile": {
+      "title": "Agile Methodology",
+      "description": "Iterative development with continuous feedback and improvement cycles"
+    },
+    "additionalTitle": "And Much More",
+    "additional": {
+      "quality": "Quality Assurance",
+      "security": "Security First",
+      "analytics": "Data & Analytics"
+    }
+  },
+  "portfolio": {
+    "badge": "Portfolio",
+    "title": "Our Work",
+    "subtitle": "Discover our latest projects and success stories",
+    "viewProject": "View Project",
+    "viewAll": "View All Projects",
+    "viewCaseStudy": "View Case Study",
+    "filters": {
+      "all": "All Projects",
+      "webDev": "Web Development",
+      "mobile": "Mobile Apps",
+      "software": "Software Solutions",
+      "uiux": "UI/UX Design"
+    },
+    "categories": {
+      "webDev": "Web Development",
+      "mobile": "Mobile App",
+      "software": "Software Solution",
+      "uiux": "UI/UX Design"
+    },
+    "loadMore": "Load More Projects",
+    "projects": {
+      "ecommerce": {
+        "description": "Modern online shopping experience with seamless checkout, inventory management, and real-time analytics"
+      },
+      "healthcare": {
+        "description": "Patient management system improving healthcare accessibility through telemedicine and smart scheduling"
+      },
+      "financial": {
+        "description": "Real-time analytics dashboard for data-driven financial decisions with advanced visualization"
+      },
+      "designSystem": {
+        "description": "Comprehensive design system with reusable components, detailed documentation, and brand consistency"
+      },
+      "foodDelivery": {
+        "description": "Seamless food delivery platform with real-time tracking, multi-restaurant management, and secure payments"
+      },
+      "saas": {
+        "description": "Enterprise-grade SaaS solution with subscription management, analytics, and scalable infrastructure"
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it - hear from our satisfied clients",
+    "testimonial1": {
+      "quote": "Rakeez Solutions transformed our digital presence. Their expertise and dedication resulted in a platform that exceeded our expectations.",
+      "name": "Ahmed Al-Rashid",
+      "position": "CEO"
+    },
+    "testimonial2": {
+      "quote": "Working with Rakeez was a game-changer for our startup. They delivered a scalable solution that grew with our business.",
+      "name": "Sarah Johnson",
+      "position": "Founder"
+    },
+    "testimonial3": {
+      "quote": "The team's technical expertise and creative approach helped us achieve our digital transformation goals ahead of schedule.",
+      "name": "Mohammed Al-Qahtani",
+      "position": "CTO"
+    },
+    "testimonial4": {
+      "quote": "Outstanding service and support. Rakeez Solutions delivered a robust e-commerce platform that increased our revenue by 200%.",
+      "name": "Lisa Chen",
+      "position": "Director of Operations"
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get In Touch",
+    "subtitle": "Let's Build Something Great Together",
+    "mapPlaceholder": "Map Location",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again.",
+      "errors": {
+        "name": "Name is required",
+        "email": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "message": "Message is required"
+      }
+    },
+    "info": {
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "hours": "Working Hours",
+      "hoursValue": "Sun - Thu: 9AM - 6PM"
+    }
+  },
+  "cta": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "requestQuote": "Request a Quote",
+    "viewDetails": "View Details"
+  },
+  "footer": {
+    "company": "Rakeez Solutions",
+    "tagline": "Your Partner in Digital Excellence",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "social": "Follow Us",
+    "copyright": "© {{year}} Rakeez Solutions. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try Again",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu"
+  }
+}
