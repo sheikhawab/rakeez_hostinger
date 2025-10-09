@@ -20,7 +20,7 @@ export const ServicesSection = () => {
     },
     {
       icon: '🎨',
-      titleKey: 'uiuxDesign',
+      titleKey: 'Financial Consulting',
       features: ['userInterfaces', 'prototyping', 'designSystems'],
       slug: 'ui-ux-design',
     },

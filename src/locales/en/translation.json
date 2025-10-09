@@ -41,6 +41,13 @@
       "prototyping": "Prototyping & Wireframing",
       "designSystems": "Design Systems"
     },
+    "Financial Consulting": {
+      "title": "Financial Consulting",
+      "description": "Improving Cash Flow: Preparing a Financial Plan for Your Project, Analyzing Your Company's Financial Performance",
+      "Transformation": "Financial Transformation",
+      "Strategy": "Financial Strategy",
+      "businessAnalysis": "Financial Performance Analysis"
+    },
     "digitalConsulting": {
       "title": "Digital Consulting",
       "description": "Strategic guidance to navigate your digital transformation journey successfully.",
@@ -286,5 +293,41 @@
     "title": "Rakeez Solutions",
     "subtitle": "The right way to build websites and stores",
     "tagline": "Empowering businesses with technology"
+  },
+  "DemoLamp": {"itSolutions":"All Your IT Solutions, Under One Roof."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What type of financial consulting do you offer?",
+    "a1": "We offer financial consulting including budgeting, financial planning, cost management, and financial analysis for small and medium-sized projects.",
+    "q2": "Can you help me prepare a financial plan for my project?",
+    "a2": "Yes, we provide a comprehensive financial planning service that includes projected revenues, expenses, cash flow, and profitability analysis.",
+    "q3": "Do you offer financial statement preparation or review services?",
+    "a3": "Yes, we offer services for preparing financial statements (balance sheet, income statement, cash flow) or reviewing them if already prepared.",
+    "q4": "What kind of administrative services do you offer?",
+    "a4": "We help businesses develop organizational structures, internal policies, improve operations, and build effective teams.",
+    "q5": "Do you assist in preparing procedural manuals or policies?",
+    "a5": "Yes, we provide services for preparing procedural manuals, employee handbooks, and designing formal work policies.",
+    "q6": "Do you offer ready-made marketing plans?",
+    "a6": "Yes, we create strategic marketing plans tailored to each project, including market research, target audience identification, and channel selection.",
+    "q7": "Do you manage social media accounts?",
+    "a7": "We offer consulting and guidance on content management, but we only manage accounts directly within specific packages.",
+    "q8": "Do you offer software consulting or website development?",
+    "a8": "Yes, we provide technical consulting related to selecting suitable systems, managing tech projects, and evaluating software proposals.",
+    "q9": "Can you help me choose an ERP or CRM system?",
+    "a9": "Absolutely, we assist you in selecting the right system based on your business needs and evaluating available market options.",
+    "q10": "Can I get a refund if I'm not satisfied?",
+    "a10": "Yes, we have a flexible refund policy within the first 7 days of the consultation date, provided the service hasn’t been fully utilized.",
+    "q11": "How can I book a consultation?",
+    "a11": "You can book through the website using the booking form or contact us directly via email or WhatsApp.",
+    "q12": "How can I contact Rakez Solutions?",
+    "a12": "You can reach us via the website form or directly through the support email.",
+    "q13": "Do you offer bilingual support?",
+    "a13": "Yes! We support both English and Arabic languages."
   }
+
+  
 }
+
+
+

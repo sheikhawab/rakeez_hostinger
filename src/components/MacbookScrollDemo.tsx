@@ -1,11 +1,14 @@
+import { t } from "i18next";
 import { MacbookScroll } from "./ui/macbook-scroll";
+
 export function MacbookScrollDemo() {
   return (
     <div className="w-full overflow-hidden bg-white dark:bg-[#0B0B0F]">
       <MacbookScroll
         title={
           <span>
-            All Your IT Solutions, Under One Roof <br /> Rakeez Solutions.
+            {t("DemoLamp.itSolutions")}
+            {/* All Your IT Solutions, Under One Roof <br /> Rakeez Solutions. */}
           </span>
         }
         badge={
