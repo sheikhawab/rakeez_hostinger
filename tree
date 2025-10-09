@@ -1,0 +1,62 @@
+Rakeez_web                           
+├─ public                            
+│  └─ vite.svg                       
+├─ src                               
+│  ├─ components                     
+│  │  ├─ ui                          
+│  │  │  ├─ BentoGrid.tsx            
+│  │  │  ├─ Card3D.tsx               
+│  │  │  ├─ FloatingElements.tsx     
+│  │  │  ├─ FloatingLabelInput.tsx   
+│  │  │  ├─ GridBackground.tsx       
+│  │  │  ├─ HoverBorder.tsx          
+│  │  │  ├─ ImageHoverEffect.tsx     
+│  │  │  ├─ InfiniteMovingCards.tsx  
+│  │  │  ├─ ProjectPlaceholder.tsx   
+│  │  │  ├─ Spotlight.tsx            
+│  │  │  ├─ StatsCounter.tsx         
+│  │  │  ├─ TextGenerateEffect.tsx   
+│  │  │  ├─ TextHighlight.tsx        
+│  │  │  └─ Timeline.tsx             
+│  │  ├─ AboutSection.tsx            
+│  │  ├─ Background.tsx              
+│  │  ├─ ContactSection.tsx          
+│  │  ├─ FeaturesSection.tsx         
+│  │  ├─ Footer.tsx                  
+│  │  ├─ Header.tsx                  
+│  │  ├─ HeroSection.tsx             
+│  │  ├─ LanguageSwitch.tsx          
+│  │  ├─ LoadingScreen.tsx           
+│  │  ├─ Logo.tsx                    
+│  │  ├─ MainLayout.tsx              
+│  │  ├─ MobileMenu.tsx              
+│  │  ├─ PortfolioSection.tsx        
+│  │  ├─ ProjectCard.tsx             
+│  │  ├─ ServiceCard.tsx             
+│  │  ├─ ServicesSection.tsx         
+│  │  └─ TestimonialsSection.tsx     
+│  ├─ lib                            
+│  │  └─ utils.ts                    
+│  ├─ locales                        
+│  │  ├─ ar                          
+│  │  │  └─ translation.json         
+│  │  ├─ en                          
+│  │  │  └─ translation.json         
+│  │  ├─ ar.json                     
+│  │  └─ en.json                     
+│  ├─ App.css                        
+│  ├─ App.tsx                        
+│  ├─ i18n.ts                        
+│  ├─ index.css                      
+│  └─ main.tsx                       
+├─ eslint.config.js                  
+├─ index.html                        
+├─ package-lock.json                 
+├─ package.json                      
+├─ postcss.config.js                 
+├─ README.md                         
+├─ tailwind.config.js                
+├─ tsconfig.app.json                 
+├─ tsconfig.json                     
+├─ tsconfig.node.json                
+└─ vite.config.ts                    

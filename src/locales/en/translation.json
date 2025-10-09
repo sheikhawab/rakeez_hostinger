@@ -36,7 +36,7 @@
     },
     "uiuxDesign": {
       "title": "UI/UX Design",
-      "description": "Beautiful, intuitive interfaces designed with your users in mind to maximize engagement.",
+      "description": "Beautiful and intuitive interfaces designed to engage users, enhance experience, and boost interaction..",
       "userInterfaces": "User Interface Design",
       "prototyping": "Prototyping & Wireframing",
       "designSystems": "Design Systems"
@@ -253,7 +253,7 @@
       "email": "Email",
       "phone": "Phone",
       "hours": "Working Hours",
-      "hoursValue": "Sun - Thu: 9AM - 6PM"
+      "hoursValue": "Sat - Thu: 9AM - 5PM"
     }
   },
   "cta": {
@@ -274,12 +274,17 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   },
-  "common": {
+    "common": {
     "loading": "Loading...",
     "error": "An error occurred",
     "tryAgain": "Try Again",
     "close": "Close",
     "open": "Open",
     "menu": "Menu"
+  },
+  "lamp": {
+    "title": "Rakeez Solutions",
+    "subtitle": "The right way to build websites and stores",
+    "tagline": "Empowering businesses with technology"
   }
 }

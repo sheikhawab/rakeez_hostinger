@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import { Card3D } from './ui/Card3D';
-import { HoverBorder } from './ui/HoverBorder';
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Card3D } from "./ui/Card3D";
+import { HoverBorder } from "./ui/HoverBorder";
 
 interface ServiceCardProps {
   icon: string;
@@ -22,25 +22,25 @@ export const ServiceCard = ({
   slug,
 }: ServiceCardProps) => {
   const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === 'ar';
+  const isRTL = i18n.language === "ar";
 
   return (
     <motion.div
+      // className="h-full"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-100px' }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Card3D className="h-full">
-        <HoverBorder
-          containerClassName="h-full"
-          className="h-full"
-        >
+        <HoverBorder containerClassName="h-full" className="h-full">
           <div className="h-full p-8 bg-white border border-secondary-200 rounded-2xl group-hover:border-primary-400 transition-all duration-300 shadow-sm hover:shadow-xl">
+          {/* <div className="h-full flex flex-col justify-between p-8 bg-white border border-secondary-200 rounded-2xl group-hover:border-primary-400 transition-all duration-300 shadow-sm hover:shadow-xl"> */}
+
             {/* Icon */}
             <motion.div
               className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
-              whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+              whileHover={{ rotate: [0, -30, 30, -30, 0], scale: 1.4 }} // awab edited
               transition={{ duration: 0.5 }}
             >
               <span className="text-3xl filter drop-shadow-sm">{icon}</span>
@@ -61,7 +61,7 @@ export const ServiceCard = ({
               {features.map((feature, idx) => (
                 <motion.li
                   key={idx}
-                  className="flex items-start gap-2 text-sm text-secondary-700"
+                  className="flex items-start gap-2 text-sm text-secondary-700 "
                   initial={{ opacity: 0, x: isRTL ? 10 : -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -80,13 +80,13 @@ export const ServiceCard = ({
                   className="inline-flex items-center gap-2 text-primary-500 font-semibold hover:text-primary-600 group/link"
                   whileHover={{ x: isRTL ? -5 : 5 }}
                 >
-                  {t('cta.learnMore')}
+                  {t("cta.learnMore")}
                   <motion.span
                     className="inline-block"
                     animate={{ x: [0, 5, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
                   >
-                    {isRTL ? '←' : '→'}
+                    {isRTL ? "←" : "→"}
                   </motion.span>
                 </motion.div>
               </Link>
@@ -96,13 +96,13 @@ export const ServiceCard = ({
                 className="inline-flex items-center gap-2 text-primary-500 font-semibold hover:text-primary-600 group/link"
                 whileHover={{ x: isRTL ? -5 : 5 }}
               >
-                {t('cta.learnMore')}
+                {t("cta.learnMore")}
                 <motion.span
                   className="inline-block"
                   animate={{ x: [0, 5, 0] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
                 >
-                  {isRTL ? '←' : '→'}
+                  {isRTL ? "←" : "→"}
                 </motion.span>
               </motion.a>
             )}

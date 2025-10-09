@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ProjectCard } from './ProjectCard';
+// import { ProjectCard } from './ProjectCard';
+import { PortfolioCart } from './PortfolioCart';
+
+// import pictures from public folder
+import Technology from "../assets/Technology_in_Daily_Life.webp";
+import fooddelovery from "../assets/food delovery.png";
+import hospital from "../assets/hospital.webp";
+import system from "../assets/system desing.jpg";
+import saas from "../assets/saas.jpg";
+import financial from "../assets/financial.jpg";
 
 export const PortfolioSection = () => {
   const { t } = useTranslation();
@@ -17,6 +26,7 @@ export const PortfolioSection = () => {
       pattern: 'gradient' as const,
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
       descriptionKey: 'portfolio.projects.ecommerce.description',
+      image: Technology,
     },
     {
       id: 2,
@@ -26,6 +36,7 @@ export const PortfolioSection = () => {
       pattern: 'geometric' as const,
       technologies: ['React Native', 'Firebase', 'TypeScript', 'Redux'],
       descriptionKey: 'portfolio.projects.healthcare.description',
+      image: hospital,
     },
     {
       id: 3,
@@ -35,6 +46,7 @@ export const PortfolioSection = () => {
       pattern: 'minimal' as const,
       technologies: ['Next.js', 'Python', 'PostgreSQL', 'D3.js'],
       descriptionKey: 'portfolio.projects.financial.description',
+      image: financial,
     },
     {
       id: 4,
@@ -44,6 +56,7 @@ export const PortfolioSection = () => {
       pattern: 'gradient' as const,
       technologies: ['Figma', 'React', 'Storybook', 'Tailwind CSS'],
       descriptionKey: 'portfolio.projects.designSystem.description',
+      image: system,
     },
     {
       id: 5,
@@ -53,6 +66,7 @@ export const PortfolioSection = () => {
       pattern: 'geometric' as const,
       technologies: ['Flutter', 'Firebase', 'Google Maps', 'Stripe'],
       descriptionKey: 'portfolio.projects.foodDelivery.description',
+      image: fooddelovery,
     },
     {
       id: 6,
@@ -62,6 +76,7 @@ export const PortfolioSection = () => {
       pattern: 'minimal' as const,
       technologies: ['Vue.js', 'Laravel', 'AWS', 'Docker', 'Redis'],
       descriptionKey: 'portfolio.projects.saas.description',
+      image: saas,
     },
   ];
 
@@ -81,7 +96,8 @@ export const PortfolioSection = () => {
       });
 
   return (
-    <section id="portfolio" className="relative py-24 bg-white overflow-hidden">
+    // py-24
+    <section id="portfolio" className="relative  bg-white overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -143,15 +159,26 @@ export const PortfolioSection = () => {
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid    yahan amsla hai ////////////////////// */}
         <motion.div
           layout
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          // className="grid md:grid-cols-2 lg:grid-cols-3 gap-18 mb-12"
+           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12"
+          
         >
           <AnimatePresence mode="popLayout">
             {(showMore ? filteredProjects : filteredProjects.slice(0, 6)).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
+              // <ProjectCard key={project.id} project={project} index={index} />
+                <PortfolioCart  title={project.title}
+                client={project.client}
+                category={project.category}
+                technologies={project.technologies}
+                image={project.image || ''} // agar image hai to pass karo, nahi to ''
+                descriptionKey={project.descriptionKey}
+                index={index} // optional, ab allowed hai 
+                />
+                ))
+              }
           </AnimatePresence>
         </motion.div>
 
@@ -163,7 +190,7 @@ export const PortfolioSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          {filteredProjects.length > 6 && !showMore ? (
+          {/* {filteredProjects.length > 6 && !showMore ? (
             <motion.button
               onClick={() => setShowMore(true)}
               className="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-secondary-300 text-secondary-900 rounded-lg font-semibold hover:border-primary-500 hover:text-primary-600 transition-all"
@@ -183,9 +210,11 @@ export const PortfolioSection = () => {
               {t('portfolio.viewAll')}
               <span>→</span>
             </motion.a>
-          )}
+          )} */}
         </motion.div>
       </div>
     </section>
+
+
   );
 };

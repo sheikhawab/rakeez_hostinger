@@ -52,7 +52,8 @@ export const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+
+          className="text-center mb-16 "
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -80,7 +81,7 @@ export const ServicesSection = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8  ">
           {services.map((service, index) => (
             <ServiceCard
               key={service.titleKey}
@@ -97,7 +98,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <motion.div
+        {/* <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +117,7 @@ export const ServicesSection = () => {
             {t('cta.contactUs')}
             <span>→</span>
           </motion.a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

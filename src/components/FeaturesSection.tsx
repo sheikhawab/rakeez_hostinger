@@ -42,7 +42,8 @@ export const FeaturesSection = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-secondary-50/30 to-white overflow-hidden">
+    <section className="relative bg-gradient-to-b from-secondary-50/30 to-white overflow-hidden"> 
+    {/*  py-24 */}
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <motion.div

@@ -7,10 +7,14 @@ import { PortfolioSection } from './components/PortfolioSection'
 import { TestimonialsSection } from './components/TestimonialsSection'
 import { ContactSection } from './components/ContactSection'
 import './App.css'
+import {  LampDemo } from './components/Background'
+import { MacbookScrollDemo } from './components/MacbookScrollDemo'
+// import { PortfolioGrid } from './components/PortfolioGrid'
+
 
 function App() {
   return (
-    <MainLayout>
+/**   <MainLayout>
       <HeroSection />
       <ServicesSection />
       <AboutSection />
@@ -18,7 +22,21 @@ function App() {
       <PortfolioSection />
       <TestimonialsSection />
       <ContactSection />
-    </MainLayout>
+    </MainLayout> */
+<>
+   <MainLayout>
+      <HeroSection />
+       <MacbookScrollDemo/>
+       {/* <LampDemo/> */}
+      <ServicesSection />
+      {/* <AboutSection /> */}
+      <FeaturesSection />
+      <PortfolioSection />
+      {/* <PortfolioGrid/> */}
+      <TestimonialsSection />
+      <ContactSection />
+   </MainLayout>
+</>
   )
 }
 

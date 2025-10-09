@@ -1,7 +1,10 @@
+// ContactSection.tsx
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+
 import { FloatingLabelInput } from './ui/FloatingLabelInput';
+import emailjs from '@emailjs/browser'; // 👈 added
 
 export const ContactSection = () => {
   const { t } = useTranslation();
@@ -18,38 +21,48 @@ export const ContactSection = () => {
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = t('contact.form.errors.name');
-    }
+    if (!formData.name.trim()) newErrors.name = t('contact.form.errors.name');
     if (!formData.email.trim()) {
       newErrors.email = t('contact.form.errors.email');
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = t('contact.form.errors.emailInvalid');
     }
-    if (!formData.message.trim()) {
-      newErrors.message = t('contact.form.errors.message');
-    }
-
+    if (!formData.message.trim()) newErrors.message = t('contact.form.errors.message');
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  // 👇 EmailJS integration added here
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setErrors({});
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      await emailjs.send(
+        "service_gwdgjge", // Rakeez service id
+        "template_f4y3kaw", // Rakeez template id
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'knE8Uzpq_5-EwbADs'   // Rakeez public key
+      );
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-
-    setTimeout(() => setIsSuccess(false), 5000);
+      setIsSuccess(true);
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (err) {
+      console.error('EmailJS Error:', err);
+      setErrors({ global: 'Failed to send message. Try again later.' });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setIsSuccess(false), 5000);
+    }
   };
 
   const contactInfo = [
@@ -61,12 +74,12 @@ export const ContactSection = () => {
     {
       icon: '📧',
       label: t('contact.info.email'),
-      value: 'info@rakeez.com',
+      value: 'it@rakeezsolutions.sa',
     },
     {
       icon: '📞',
       label: t('contact.info.phone'),
-      value: '+966 XX XXX XXXX',
+      value: '+966 536499916',
     },
     {
       icon: '🕐',
@@ -178,10 +191,17 @@ export const ContactSection = () => {
                   {t('contact.form.success')}
                 </motion.div>
               )}
+
+              {/* Global Error (optional) */}
+              {errors.global && (
+                <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-center rounded-lg">
+                  {errors.global}
+                </div>
+              )}
             </form>
           </motion.div>
 
-          {/* Contact Information */}
+          {/* Right-side contact info and map (unchanged) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -189,7 +209,6 @@ export const ContactSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            {/* Contact Info Cards */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -211,19 +230,22 @@ export const ContactSection = () => {
               ))}
             </div>
 
-            {/* Map Placeholder */}
             <motion.div
               className="h-64 bg-gradient-to-br from-secondary-100 to-secondary-50 rounded-xl border border-secondary-200 overflow-hidden relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="text-6xl mb-4 block">🗺️</span>
-                  <p className="text-secondary-600 font-medium">{t('contact.mapPlaceholder')}</p>
-                </div>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.160678039637!2d46.74585527515068!3d24.82417817795286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efff9eaae1b97%3A0x567d68a0d1df6b33!2zUmFrZWV6IFNvbHV0aW9ucyAtINix2YPZitiyINin2YTYrdmE2YjZhA!5e0!3m2!1sen!2ssa!4v1759932411104!5m2!1sen!2ssa"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+              ></iframe>
             </motion.div>
           </motion.div>
         </div>

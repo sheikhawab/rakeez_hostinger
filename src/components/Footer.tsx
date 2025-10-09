@@ -2,6 +2,17 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Logo } from './Logo';
 
+import FacebookIcon from '@mui/icons-material/Facebook';
+
+import TwitterIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
+// ye 2 icons react-icons se hain or upr waley mui se hain
+import { FaTiktok } from 'react-icons/fa6';
+import { FaSnapchat } from 'react-icons/fa6';
+
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
@@ -23,11 +34,15 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: '📘', href: '#' },
-    { name: 'Twitter', icon: '🐦', href: '#' },
-    { name: 'LinkedIn', icon: '💼', href: '#' },
-    { name: 'Instagram', icon: '📷', href: '#' },
+    { name: 'Facebook', icon:  <FacebookIcon />, href: 'https://www.facebook.com/people/Rakeez-Solutions/61581383070987/' },
+    { name: 'Twitter', icon:<TwitterIcon/> , href: 'https://x.com/RakeezSolutions' },
+    { name: 'LinkedIn', icon:<LinkedInIcon/> , href: 'https://www.linkedin.com/in/rakeez-rakeez-b792a2389/' },
+    { name: 'Instagram', icon:<InstagramIcon/> , href: 'https://www.instagram.com/rakeez_solutions/' },
+    { name: 'Snapchat', icon: <FaSnapchat/>, href: 'https://www.snapchat.com/add/rakeezsolutions?share_id=VCa8jhfFgvU&locale=en-US' },
+    { name: 'Tiktok', icon: <FaTiktok/>, href: 'https://www.tiktok.com/@rakeezconsultations'},
+    { name: 'Whatsapp', icon: <WhatsAppIcon/>, href: 'https://wa.me/966536499916'},
   ];
+  
 
   return (
     <footer className="relative bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 text-white pt-20 pb-10 overflow-hidden">
@@ -98,11 +113,14 @@ export const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
-                  className="w-11 h-11 rounded-xl bg-secondary-700/50 backdrop-blur-sm border border-secondary-600 flex items-center justify-center hover:bg-primary-500 hover:border-primary-400 transition-all"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={social.name}
-                >
+                  target="_blank"                     
+                  rel="noopener noreferrer"    
+                  className="w-11 h-11 rounded-xl flex items-center justify-center hover:bg-primary-500 hover:border-primary-400 transition-all"
+                   whileHover={{ scale: 1.1, y: -3 }}
+                   whileTap={{ scale: 0.95 }}
+                   aria-label={social.name}
+                   >
+                    {/* bg-secondary-700/50 backdrop-blur-sm border border-secondary-600   */}
                   <span className="text-xl">{social.icon}</span>
                 </motion.a>
               ))}
@@ -110,11 +128,23 @@ export const Footer = () => {
             <div className="space-y-3 text-sm text-secondary-300">
               <p className="flex items-center gap-2">
                 <span className="text-primary-500">✉</span>
-                info@rakeez.com
+                {/* info@rakeez.com */}
+                 <a
+                  href="it@rakeezsolutions.sa"
+                  className="hover:text-primary-400 transition-colors"
+                  >
+                  it@rakeezsolutions.sa
+                  </a>
               </p>
               <p className="flex items-center gap-2">
                 <span className="text-primary-500">📞</span>
-                +966 XX XXX XXXX
+                {/* +966 536499916 */}
+                <a
+                href="tel:+966536499916"
+                className="hover:text-primary-400 transition-colors"
+                >
+                +966 536499916
+                </a>
               </p>
             </div>
           </div>
