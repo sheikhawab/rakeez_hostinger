@@ -12,7 +12,7 @@ export const Logo = ({ className = '', animate = false }: LogoProps) => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 2, ease: 'easeInOut' },
+        pathLength: { duration: 2, ease: 'easeInOut' as any },
         opacity: { duration: 0.5 },
       },
     },

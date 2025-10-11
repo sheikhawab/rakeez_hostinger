@@ -15,7 +15,7 @@ import financial from "../assets/financial.jpg";
 export const PortfolioSection = () => {
   const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState('all');
-  const [showMore, setShowMore] = useState(false);
+  const [showMore] = useState(false);
 
   const projects = [
     {

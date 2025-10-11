@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { LanguageSwitch } from './LanguageSwitch';
 import { MobileMenu } from './MobileMenu';
@@ -12,7 +12,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isRTL = i18n.language === 'ar';
-  const location = useLocation();
+  
 
   const navItems = [
     { label: t('nav.home'), href: '/' },

@@ -1,6 +1,6 @@
 
 // awab
-"use client";
+
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import picture from "../../public/Technology_in_Daily_Life.webp";
@@ -115,7 +115,7 @@ export function PortfolioGrid() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.map((project) => (
           <PortfolioCart key={project.id} {...project} />
           // <PortfolioCart  title={project.title}
           //       client={project.client}

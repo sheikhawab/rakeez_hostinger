@@ -1,7 +1,6 @@
-'use client';
 import * as motion from "motion/react-client";
 import type { Variants } from "motion/react";
-import React from "react";
+
 
 export default function ScrollTriggered() {
   return (

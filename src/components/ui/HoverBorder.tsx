@@ -1,4 +1,5 @@
-import { ReactNode, useRef } from 'react';
+import {  useRef } from 'react';
+import type { ReactNode } from "react";
 import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { cn } from '../../lib/utils';
 

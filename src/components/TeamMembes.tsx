@@ -1,5 +1,4 @@
-'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import  { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, animate } from 'motion/react';
 
 export const items = [

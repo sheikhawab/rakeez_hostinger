@@ -1,4 +1,3 @@
-import React from "react";
 import whatsapp from '../../src/assets/whatsappicon.svg'
 // import whatsapp from '../../src/assets/whatsapp.svg'
 

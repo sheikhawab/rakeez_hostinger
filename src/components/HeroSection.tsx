@@ -24,7 +24,10 @@ export const HeroSection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      // transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: 'easeOut' as any }
+      // yahan any is liye kiya k string or object ka jo tareeka hai wo library se handle ho rhahia 
+
     },
   };
 
