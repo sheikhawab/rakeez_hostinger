@@ -12,6 +12,7 @@ import { MacbookScrollDemo } from './components/MacbookScrollDemo'
 import { Faq } from './components/Faq'
 import WhatsAppFloating from './components/WhatsApp'
 import Team from './components/TeamMembes'
+import CardGallery from './components/Pictures'
 
 // import { PortfolioGrid } from './components/PortfolioGrid'
 
@@ -33,6 +34,7 @@ function App() {
       <TestimonialsSection />
       <Faq/>
       <Team/>
+      <CardGallery/>
       <ContactSection />
       <WhatsAppFloating/>
    </MainLayout>
