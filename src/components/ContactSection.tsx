@@ -89,47 +89,75 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-24 bg-white overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
+    <section id="contact" className="relative py-20 bg-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(245, 158, 11, 0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(245, 158, 11, 0.2) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }}
+        />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        {/* Contact Content - Single Row Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Info - Left Side */}
           <motion.div
-            className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-4"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 200 }}
-          >
-            <span className="text-primary-700 font-semibold text-sm">
-              {t('contact.badge')}
-            </span>
-          </motion.div>
-
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4">
-            {t('contact.title')}
-          </h2>
-          <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-            {t('contact.subtitle')}
-          </p>
-        </motion.div>
-
-        {/* Contact Content */}
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <motion.div
+            className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Header with Icon */}
+            <div>
+              <div className="w-16 h-16 bg-primary-500 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">📧</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
+                {t('contact.title')}
+              </h2>
+              <p className="text-lg text-secondary-600 mb-8">
+                {t('contact.subtitle')}
+              </p>
+            </div>
+
+            {/* Contact Info List */}
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="text-2xl">{info.icon}</div>
+                  <div>
+                    <p className="text-secondary-600 text-sm">{info.label}</p>
+                    <p className="text-secondary-900 font-medium">{info.value}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Contact Form - Right Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="bg-secondary-50 rounded-3xl shadow-xl p-8 md:p-10 border border-secondary-200">
+              <form onSubmit={handleSubmit} className="space-y-5">
               <FloatingLabelInput
                 label={t('contact.form.name')}
                 value={formData.name}
@@ -167,13 +195,13 @@ export const ContactSection = () => {
                 error={errors.message}
                 required
                 multiline
-                rows={6}
+                rows={4}
               />
 
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                className="w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 disabled={isSubmitting}
@@ -192,61 +220,14 @@ export const ContactSection = () => {
                 </motion.div>
               )}
 
-              {/* Global Error (optional) */}
+              {/* Global Error */}
               {errors.global && (
-                <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-center rounded-lg">
+                <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-center rounded-lg">
                   {errors.global}
                 </div>
               )}
             </form>
-          </motion.div>
-
-          {/* Right-side contact info and map (unchanged) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-4 p-6 bg-secondary-50 rounded-xl border border-secondary-200 hover:border-primary-400 transition-colors"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
-                    {info.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary-900 mb-1">{info.label}</h3>
-                    <p className="text-secondary-600">{info.value}</p>
-                  </div>
-                </motion.div>
-              ))}
             </div>
-
-            <motion.div
-              className="h-64 bg-gradient-to-br from-secondary-100 to-secondary-50 rounded-xl border border-secondary-200 overflow-hidden relative"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.160678039637!2d46.74585527515068!3d24.82417817795286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efff9eaae1b97%3A0x567d68a0d1df6b33!2zUmFrZWV6IFNvbHV0aW9ucyAtINix2YPZitiyINin2YTYrdmE2YjZhA!5e0!3m2!1sen!2ssa!4v1759932411104!5m2!1sen!2ssa"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Map"
-              ></iframe>
-            </motion.div>
           </motion.div>
         </div>
       </div>

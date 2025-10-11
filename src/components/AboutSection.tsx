@@ -125,33 +125,6 @@ export const AboutSection = () => {
           </h3>
           <Timeline items={timelineItems} />
         </div>
-
-        {/* Team Expertise */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-secondary-900 mb-8">
-            {t('about.expertiseTitle')}
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {expertise.map((skill, index) => (
-              <motion.div
-                key={skill}
-                className="px-6 py-3 bg-gradient-to-r from-primary-400 to-primary-600 text-white rounded-full font-semibold shadow-lg"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                {skill}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

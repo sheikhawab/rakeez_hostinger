@@ -67,18 +67,6 @@ export const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-4"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 200 }}
-          >
-            <span className="text-primary-700 font-semibold text-sm">
-              {t('features.badge')}
-            </span>
-          </motion.div>
-
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4">
             {t('features.title')}
           </h2>
@@ -101,7 +89,7 @@ export const FeaturesSection = () => {
           ))}
         </BentoGrid>
 
-        {/* Additional Features List */}
+        {/* Additional Features List
         <motion.div
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -134,7 +122,7 @@ export const FeaturesSection = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -108,18 +108,6 @@ export const PortfolioSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-4"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 200 }}
-          >
-            <span className="text-primary-700 font-semibold text-sm">
-              {t('portfolio.badge')}
-            </span>
-          </motion.div>
-
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4">
             {t('portfolio.title')}
           </h2>
