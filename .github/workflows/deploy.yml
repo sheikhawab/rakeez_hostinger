@@ -50,4 +50,3 @@ jobs:
             sudo cp -r /home/ubuntu/rakeez-web/dist/* /var/www/html/
             sudo systemctl restart nginx
             echo "✅ Deployment complete!"
-            echo "🌐 Visit your site at http://$EC2_HOST"
