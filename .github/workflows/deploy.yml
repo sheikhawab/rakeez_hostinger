@@ -42,6 +42,6 @@ jobs:
           script: |
             echo "🔹 Deploying new build to Nginx..."
             sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/react-app/build/* /var/www/html/
+            sudo cp -r /home/ubuntu/rakeez-web/build/* /var/www/html/
             sudo systemctl restart nginx
             echo "✅ Deployment complete!"
