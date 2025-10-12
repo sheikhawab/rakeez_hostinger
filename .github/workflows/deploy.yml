@@ -1,9 +1,9 @@
-name: 🚀 Deploying Rakeez web
+name: 🚀 Deploying Rakeez Web
 
 on:
   push:
     branches:
-      - master
+      - master  # Change to 'main' if your default branch is main
 
 jobs:
   deploy:
@@ -11,28 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout the latest code
       - name: Checkout source code
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup correct Node.js version (Vite needs >=20)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Install and build React app
+      # 3️⃣ Install dependencies and build
+      - name: Install and build Vite React app
         run: |
           npm ci
           npm run build
 
+      # 4️⃣ Upload 'dist' folder to EC2
       - name: Upload build files to EC2
         uses: appleboy/scp-action@v0.1.6
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
-          source: "build/*"
-          target: "/home/ubuntu/react-app/build"
+          source: "dist/"
+          target: "/home/ubuntu/rakeez-web"
 
+      # 5️⃣ SSH into EC2 and deploy
       - name: Deploy and restart Nginx
         uses: appleboy/ssh-action@v0.1.6
         with:
@@ -41,7 +46,11 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "🔹 Deploying new build to Nginx..."
+            # Make sure target folder exists
+            sudo mkdir -p /var/www/html
             sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/react-app/build/* /var/www/html/
+            sudo cp -r /home/ubuntu/rakeez-web/dist/* /var/www/html/
+            sudo chown -R www-data:www-data /var/www/html
+            sudo chmod -R 755 /var/www/html
             sudo systemctl restart nginx
             echo "✅ Deployment complete!"
