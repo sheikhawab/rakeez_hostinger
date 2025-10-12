@@ -74,22 +74,14 @@ export const HeroSection = () => {
             )}
           </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
-            className="text-xl md:text-2xl text-secondary-600 mb-12 max-w-3xl mx-auto"
-            variants={itemVariants}
-          >
-            {t('hero.description')}
-          </motion.p>
-
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex justify-center"
             variants={itemVariants}
           >
             <motion.a
               href="#contact"
-              className="group relative px-8 py-4 bg-primary-500 text-white rounded-full font-semibold text-lg overflow-hidden"
+              className="group relative px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold text-base overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -109,24 +101,86 @@ export const HeroSection = () => {
                 </motion.span>
               </span>
             </motion.a>
+          </motion.div>
 
-            <motion.a
-              href="#portfolio"
-              className="group px-8 py-4 border-2 border-secondary-300 text-secondary-700 rounded-full font-semibold text-lg hover:border-primary-500 hover:text-primary-500 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="flex items-center gap-2 justify-center">
-                {t('hero.cta.secondary')}
-                <motion.span
-                  className="inline-block"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  ✦
-                </motion.span>
-              </span>
-            </motion.a>
+          {/* Dashboard Preview Section */}
+          <motion.div
+            className="mt-16 md:mt-20 relative w-full"
+            variants={itemVariants}
+          >
+            {/* Main Image Container - Full Width */}
+            <div className="relative w-full group">
+              <motion.div
+                className="relative rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                <img
+                  src="/hero-dashboard.jpg.png"
+                  alt="Dashboard Preview"
+                  className="w-full h-auto object-cover"
+                />
+
+                {/* Bottom Fade Overlay Effect - Darker */}
+                <div
+                  className="absolute inset-0 pointer-events-none z-10"
+                  style={{
+                    backgroundImage: `
+                      linear-gradient(to bottom,
+                        transparent 0%,
+                        transparent 40%,
+                        rgba(0,0,0,0.5) 70%,
+                        rgba(0,0,0,0.8) 85%,
+                        rgba(0,0,0,0.95) 100%
+                      )
+                    `
+                  }}
+                />
+              </motion.div>
+
+              {/* Floating Stat Card - Bottom Left Corner */}
+              <motion.div
+                className="absolute -bottom-3 -left-3 md:-bottom-4 md:-left-4 bg-gradient-to-br from-primary-50 to-primary-100 backdrop-blur-sm px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-lg border border-primary-200 z-20"
+                initial={{ opacity: 0, x: -20, y: 20 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="text-2xl md:text-3xl font-bold text-primary-600">150+</div>
+                  <div className="text-xs md:text-sm text-secondary-600 font-medium leading-tight">Completed<br/>Projects</div>
+                </div>
+              </motion.div>
+
+              {/* Floating Stat Card - Top Right Corner */}
+              <motion.div
+                className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-gradient-to-br from-secondary-800 to-secondary-900 backdrop-blur-sm px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-lg border border-secondary-700 z-20"
+                initial={{ opacity: 0, x: 20, y: -20 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 1.4, duration: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="text-2xl md:text-3xl font-bold text-primary-400">98%</div>
+                  <div className="text-xs md:text-sm text-secondary-300 font-medium leading-tight">Client<br/>Satisfaction</div>
+                </div>
+              </motion.div>
+
+              {/* Additional Stat Card - Bottom Right Corner */}
+              <motion.div
+                className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 bg-gradient-to-br from-primary-500 to-primary-600 backdrop-blur-sm px-4 py-3 md:px-5 md:py-4 rounded-lg shadow-lg border border-primary-400 z-20 hidden sm:block"
+                initial={{ opacity: 0, x: 20, y: 20 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 1.6, duration: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="text-2xl md:text-3xl font-bold text-white">5+</div>
+                  <div className="text-xs md:text-sm text-white/90 font-medium leading-tight">Years<br/>Experience</div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
