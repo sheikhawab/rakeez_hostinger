@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+
 
 export const ClientsSection = () => {
-  const { t } = useTranslation();
+ 
 
   const clients = [
     { name: 'Client 1', logo: '/clients/admin-ajax-modified.png' },

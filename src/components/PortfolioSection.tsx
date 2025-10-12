@@ -103,7 +103,7 @@ export const PortfolioSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -118,7 +118,7 @@ export const PortfolioSection = () => {
 
         {/* Filter Tabs - Elegant Design */}
         <motion.div
-          className="flex flex-wrap justify-center gap-2 mb-16"
+          className="flex flex-wrap justify-center gap-2 mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -147,7 +147,7 @@ export const PortfolioSection = () => {
           ))}
         </motion.div>
 
-        {/* Projects Grid    yahan amsla hai ////////////////////// */}
+       
         <motion.div
           layout
           // className="grid md:grid-cols-2 lg:grid-cols-3 gap-18 mb-12"

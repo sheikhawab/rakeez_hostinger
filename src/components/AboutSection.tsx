@@ -37,14 +37,6 @@ export const AboutSection = () => {
     { value: 98, suffix: '%', label: t('about.stats.satisfaction') },
   ];
 
-  const expertise = [
-    'React & Next.js',
-    'Node.js & Python',
-    'Cloud & DevOps',
-    'Mobile Development',
-    'UI/UX Design',
-    'Agile & Scrum',
-  ];
 
   return (
     <section id="about" className="relative py-24 bg-white overflow-hidden">
@@ -120,9 +112,13 @@ export const AboutSection = () => {
 
         {/* Timeline */}
         <div className="mb-24">
-          <h3 className="text-3xl font-bold text-center text-secondary-900 mb-16">
+          {/* <h3 className="text-3xl font-bold text-center text-secondary-900 mb-16">
             {t('about.journeyTitle')}
-          </h3>
+          </h3> */}
+           <TextGenerateEffect
+            words={t('about.journeyTitle')}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-6 text-center"
+          />
           <Timeline items={timelineItems} />
         </div>
       </div>

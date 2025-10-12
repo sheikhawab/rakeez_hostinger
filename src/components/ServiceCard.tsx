@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+
 import { Card3D } from "./ui/Card3D";
 import { HoverBorder } from "./ui/HoverBorder";
 
@@ -19,9 +19,9 @@ export const ServiceCard = ({
   description,
   features,
   index,
-  slug,
+
 }: ServiceCardProps) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 
   return (
@@ -74,7 +74,7 @@ export const ServiceCard = ({
             </ul>
 
             {/* Learn More Link */}
-            {slug ? (
+            {/* {slug ? (
               <Link to={`/services/${slug}`}>
                 <motion.div
                   className="inline-flex items-center gap-2 text-primary-500 font-semibold hover:text-primary-600 group/link"
@@ -105,7 +105,7 @@ export const ServiceCard = ({
                   {isRTL ? "←" : "→"}
                 </motion.span>
               </motion.a>
-            )}
+            )} */}
           </div>
         </HoverBorder>
       </Card3D>

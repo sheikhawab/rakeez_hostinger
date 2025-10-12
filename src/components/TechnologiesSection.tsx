@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 
 export const TechnologiesSection = () => {
-  const { t } = useTranslation();
-
+ 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

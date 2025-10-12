@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { cn } from "../lib/utils";
+import { cn } from "../lib/utils"; // Assuming cn is a utility for tailwindcss class merging
 
 export const LanguageSwitch = () => {
   const { i18n } = useTranslation();
@@ -9,48 +9,72 @@ export const LanguageSwitch = () => {
   const toggleLanguage = () => {
     const newLang = currentLang === "en" ? "ar" : "en";
     i18n.changeLanguage(newLang);
+    document.dir = newLang === "ar" ? "rtl" : "ltr"; // Update direction globally for RTL languages
   };
 
   return (
     <button
       onClick={toggleLanguage}
       aria-label="Toggle language"
-      className="relative inline-flex items-center rounded-full p-1 bg-orange-400 transition-all duration-300 w-16 h-8 shadow-md overflow-hidden"
+      className={cn(
+        "relative flex items-center",
+        "w-24 h-10 px-1 rounded-full", // Adjusted width and height for better appearance
+        "bg-gray-200 dark:bg-gray-700", // Neutral background, adaptable for dark mode
+        "shadow-inner transition-all duration-300", // Subtle inner shadow
+        "focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50" // Focus styling
+      )}
     >
-      {/* Background label for inactive language */}
-      <div className="absolute inset-0 flex justify-between items-center text-sm font-semibold text-white px-2 select-none">
-        {/* Left side */}
-        <span className={currentLang === "en" ? "opacity-100" : "opacity-50"}>
-          {currentLang === "en" ? "عربي" : "EN"}
-        </span>
-        {/* Right side */}
-        <span className={currentLang === "en" ? "opacity-50" : "opacity-100"}>
-          {currentLang === "en" ? "EN" : "ع"}
-        </span>
-      </div>
-
-      {/* Sliding white circle for active language */}
+      {/* Sliding indicator */}
       <motion.div
-        className={cn(
-          "bg-white rounded-full shadow-md flex items-center justify-center text-xs font-semibold text-orange-500 w-7 h-7"
-        )}
         layout
         animate={{
-          x: currentLang === "en" ? "calc(100% - 1.75rem)" : "0rem",
+          x: currentLang === "en" ? 0 : "calc(100% - 2.5rem)", // Adjust x position based on new width
         }}
         transition={{
           type: "spring",
           stiffness: 500,
-          damping: 30,
+          damping: 28,
         }}
+        className={cn(
+          "absolute z-10 flex items-center justify-center",
+          "w-9 h-9 rounded-full", // Slightly smaller than button height
+          "bg-white dark:bg-gray-800 text-orange-600 dark:text-orange-400 font-bold text-sm",
+          "shadow-md"
+        )}
       >
-        {/* Show active language inside the white circle */}
-        {currentLang === "en" ?   "ع" :"EN" }
+        {currentLang === "en" ? "EN" : "ع"}
       </motion.div>
+
+      {/* Language labels on the track */}
+      <div
+        className={cn(
+          "absolute inset-0 flex justify-between items-center",
+          "px-3 text-sm font-semibold",
+          "pointer-events-none" // Prevents clicks on the text itself
+        )}
+      >
+        <span
+          className={cn(
+            "text-gray-600 dark:text-gray-400",
+            currentLang === "ar" && "opacity-50",
+            currentLang === "en" && "text-orange-600 dark:text-orange-400" // Highlight active language
+          )}
+        >
+          EN
+        </span>
+        <span
+          className={cn(
+            "text-gray-600 dark:text-gray-400",
+            currentLang === "en" && "opacity-50",
+            currentLang === "ar" && "text-orange-600 dark:text-orange-400" // Highlight active language
+          )}
+        >
+          ع
+        </span>
+      </div>
     </button>
   );
 };
-
 // import { useTranslation } from 'react-i18next';
 // import { motion } from 'framer-motion';
 // import { cn } from '../lib/utils';
