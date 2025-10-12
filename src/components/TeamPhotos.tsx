@@ -14,7 +14,7 @@ const Team: React.FC = () => {
       designation: "Software Engineer",
     },
     {
-      src: "/images/ameen.jpg",
+      src: "/images/ameen.png ",
       name: "Amine Bouzidi",
       designation: "Digital Marketing",
     },
