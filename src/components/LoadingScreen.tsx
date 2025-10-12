@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Logo } from './Logo';
+// import { Logo } from './Logo';
 
 interface LoadingScreenProps {
   onLoadingComplete?: () => void;
@@ -46,7 +46,7 @@ export const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
-              <Logo className="w-32 h-32" animate />
+              {/* <Logo className="w-32 h-32" animate /> */}
             </motion.div>
 
             {/* Typewriter Text */}

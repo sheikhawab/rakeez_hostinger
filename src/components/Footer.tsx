@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Logo } from './Logo';
+// import { Logo } from './Logo';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 
@@ -57,7 +57,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <Logo className="w-12 h-12" />
+              {/* <Logo className="w-12 h-12" /> */}
               <div>
                 <h3 className="text-xl font-bold text-white">{t('footer.company')}</h3>
                 <p className="text-sm text-primary-400 font-medium">{t('footer.tagline')}</p>

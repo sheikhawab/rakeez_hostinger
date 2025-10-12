@@ -159,7 +159,7 @@ export const PortfolioSection = () => {
           ))}
         </motion.div>
 
-        {/* Projects Grid    yahan amsla hai ////////////////////// */}
+       
         <motion.div
           layout
           // className="grid md:grid-cols-2 lg:grid-cols-3 gap-18 mb-12"

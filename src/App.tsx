@@ -11,10 +11,13 @@ import {  LampDemo } from './components/Background'
 import { MacbookScrollDemo } from './components/MacbookScrollDemo'
 import { Faq } from './components/Faq'
 import WhatsAppFloating from './components/WhatsApp'
-import Team from './components/TeamMembes'
-import CardGallery from './components/Pictures'
+// import Team from './components/TeamMembes'
+// import CardGallery from './components/Pictures'
+import TeamPhotos from './components/TeamPhotos'
 
-// import { PortfolioGrid } from './components/PortfolioGrid'
+
+
+
 
 
 function App() {
@@ -33,8 +36,10 @@ function App() {
       {/* <PortfolioGrid/> */}
       <TestimonialsSection />
       <Faq/>
-      <Team/>
-      <CardGallery/>
+      {/* <Team/> */}
+      {/* <CardGallery/> */}
+      {/* <TeamPhotos/> */}
+      <TeamPhotos />
       <ContactSection />
       <WhatsAppFloating/>
    </MainLayout>
