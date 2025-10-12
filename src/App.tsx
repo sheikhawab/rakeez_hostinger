@@ -11,7 +11,7 @@ import "./App.css";
 import { Faq } from "./components/Faq";
 import WhatsAppFloating from "./components/WhatsApp";
 // import Team from './components/TeamMembes'
-// import CardGallery from './components/Pictures'
+// import CardGallery from './components/Picture'
 
 import Team from "./components/TeamPhotos";
 import Price from "./components/Price";
