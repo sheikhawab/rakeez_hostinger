@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { cn } from "../lib/utils"; // Assuming cn is a utility for tailwindcss class merging
 
 export const LanguageSwitch = () => {
   const { i18n } = useTranslation();
@@ -9,72 +8,32 @@ export const LanguageSwitch = () => {
   const toggleLanguage = () => {
     const newLang = currentLang === "en" ? "ar" : "en";
     i18n.changeLanguage(newLang);
-    document.dir = newLang === "ar" ? "rtl" : "ltr"; // Update direction globally for RTL languages
   };
+
+  const flagSrc = currentLang === "en" ?  "/flag/saudi.svg":"/flag/usa.svg" ;
+  const altText = currentLang === "en" ?  "English Flag" : "Saudi Flag"  ;
 
   return (
     <button
       onClick={toggleLanguage}
       aria-label="Toggle language"
-      className={cn(
-        "relative flex items-center",
-        "w-24 h-10 px-1 rounded-full", // Adjusted width and height for better appearance
-        "bg-gray-200 dark:bg-gray-700", // Neutral background, adaptable for dark mode
-        "shadow-inner transition-all duration-300", // Subtle inner shadow
-        "focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50" // Focus styling
-      )}
+      className="relative inline-flex items-center justify-center w-12 h-12  bg-transparent hover:opacity-80 transition-opacity duration-200"
     >
-      {/* Sliding indicator */}
-      <motion.div
-        layout
-        animate={{
-          x: currentLang === "en" ? 0 : "calc(100% - 2.5rem)", // Adjust x position based on new width
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 500,
-          damping: 28,
-        }}
-        className={cn(
-          "absolute z-10 flex items-center justify-center",
-          "w-9 h-9 rounded-full", // Slightly smaller than button height
-          "bg-white dark:bg-gray-800 text-orange-600 dark:text-orange-400 font-bold text-sm",
-          "shadow-md"
-        )}
-      >
-        {currentLang === "en" ? "EN" : "ع"}
-      </motion.div>
-
-      {/* Language labels on the track */}
-      <div
-        className={cn(
-          "absolute inset-0 flex justify-between items-center",
-          "px-3 text-sm font-semibold",
-          "pointer-events-none" // Prevents clicks on the text itself
-        )}
-      >
-        <span
-          className={cn(
-            "text-gray-600 dark:text-gray-400",
-            currentLang === "ar" && "opacity-50",
-            currentLang === "en" && "text-orange-600 dark:text-orange-400" // Highlight active language
-          )}
-        >
-          EN
-        </span>
-        <span
-          className={cn(
-            "text-gray-600 dark:text-gray-400",
-            currentLang === "en" && "opacity-50",
-            currentLang === "ar" && "text-orange-600 dark:text-orange-400" // Highlight active language
-          )}
-        >
-          ع
-        </span>
-      </div>
+      <motion.img
+        key={currentLang}
+        src={flagSrc}
+        alt={altText}
+        width={40}
+        height={40}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.8 }}
+        transition={{ duration: 0.3 }}
+      />
     </button>
   );
 };
+
 // import { useTranslation } from 'react-i18next';
 // import { motion } from 'framer-motion';
 // import { cn } from '../lib/utils';

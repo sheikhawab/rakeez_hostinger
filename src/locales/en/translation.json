@@ -41,11 +41,11 @@
       "prototyping": "Prototyping & Wireframing",
       "designSystems": "Design Systems"
     },
-    "Financial Consulting": {
+    "financialConsulting": {
       "title": "Financial Consulting",
       "description": "Improving Cash Flow: Preparing a Financial Plan for Your Project, Analyzing Your Company's Financial Performance",
-      "Transformation": "Financial Transformation",
-      "Strategy": "Financial Strategy",
+      "transformation": "Financial Transformation",
+      "strategy": "Financial Strategy",
       "businessAnalysis": "Financial Performance Analysis"
     },
     "digitalConsulting": {

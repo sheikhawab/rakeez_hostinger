@@ -19,10 +19,10 @@ export const ServicesSection = () => {
       slug: 'software-development',
     },
     {
-      icon: '🎨',
-      titleKey: 'Financial Consulting',
-      features: ['userInterfaces', 'prototyping', 'designSystems'],
-      slug: 'ui-ux-design',
+      icon: '💰',
+      titleKey: 'financialConsulting', // lowercase camelCase
+      features: ['transformation', 'strategy', 'businessAnalysis'],
+      slug: 'financial-consulting',
     },
     {
       icon: '💼',
