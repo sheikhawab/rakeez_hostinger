@@ -17,7 +17,7 @@
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Comprehensive Digital Solutions",
+    "subtitle": "Digital Solutions",
     "description": "We offer end-to-end digital services to help your business thrive in the modern world",
     "ctaText": "Ready to transform your business? Let's discuss your project",
     "webDevelopment": {
@@ -324,10 +324,62 @@
     "a12": "You can reach us via the website form or directly through the support email.",
     "q13": "Do you offer bilingual support?",
     "a13": "Yes! We support both English and Arabic languages."
+  },
+  
+  "pricing": {
+    "title": "Choose the right plan for you",
+    "subtitle": "Affordable plans packed with the best features for your audience and growth.",
+    "button": "Get started today",
+    "basic": {
+      "name": "Basic ",
+      "price": "2000 SAR",
+      "description": "Ideal for individuals or small startups who want a strong online presence.",
+      "features": [
+        "Personal portfolio & profile website",
+        "Automated contact forms for easy client interaction",
+        "Payment gateway integration",
+        "Performance optimization for fast website",
+        "Basic analytics to track visitors",
+        "Social media links integration",
+        "Mobile responsive design"
+      ]
+    },
+    "professional": {
+      "name": "Professional ",
+      "price": "5000 SAR",
+      "description": "Best for growing businesses looking to expand online and engage customers.",
+      "features": [
+        "E-commerce website for selling products/services",
+        "Marketing tools for promotions & campaigns",
+        "Real-time data updates & analytics",
+        "Chat integration & social media apps",
+        "E-learning & LMS setup",
+        "Enhanced performance & SEO",
+        "Mobile-friendly responsive design"
+      ]
+    },
+    "enterprise": {
+      "name": "Enterprise ",
+      "price": "10,000 SAR",
+      "description": "Complete solution for large businesses & organizations with multiple needs.",
+      "features": [
+        "Advanced marketing automation & campaigns",
+        "Rental apps (Taxi, Food delivery, etc.)",
+        "Real estate management system",
+        "Business solutions: HR, Finance, Inventory, Stock management",
+        "Accounting & ERP / CRM integration",
+        "Reporting & Analytics dashboards for insights",
+        "Cloud security & backup solutions",
+        "Dedicated support & custom integrations",
+        "Mobile & tablet optimized design"
+      ]
+    }
   }
+}
+
 
   
-}
+
 
 
 

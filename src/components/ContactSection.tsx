@@ -89,7 +89,7 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-20 bg-white overflow-hidden">
+    <section id="contact" className="relative pb-20 bg-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div

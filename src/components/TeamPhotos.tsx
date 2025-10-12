@@ -1,12 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const OurTeamSection: React.FC = () => {
+const Team: React.FC = () => {
   const teamMembers = [
-    { src: "/images/abuhassan.jpg", name: "Abu Hassan", designation: "Financial Consultant" },
-    { src: "/images/ahmed.jpg", name: "Ahmed Ali", designation: "Software Engineer" },
-    { src: "/images/ameen.jpg", name: "Amine Bouzidi", designation: "Digital Marketing" },
-    { src: "/images/awab.jpg", name: "Awab Shoukat", designation: "Software Engineer" },
+    {
+      src: "/images/abuhassan.jpg",
+      name: "Abu Hassan",
+      designation: "Financial Consultant",
+    },
+    {
+      src: "/images/ahmed.jpg",
+      name: "Ahmed Ali",
+      designation: "Software Engineer",
+    },
+    {
+      src: "/images/ameen.jpg",
+      name: "Amine Bouzidi",
+      designation: "Digital Marketing",
+    },
+    {
+      src: "/images/awab.jpg",
+      name: "Awab Shoukat",
+      designation: "Software Engineer",
+    },
   ];
 
   return (
@@ -24,7 +40,7 @@ const OurTeamSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div
+          {/* <motion.div
             className="inline-block px-4 py-2 bg-orange-100 rounded-full mb-4"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -34,7 +50,7 @@ const OurTeamSection: React.FC = () => {
             <span className="text-orange-700 font-semibold text-sm">
               Our Team
             </span>
-          </motion.div>
+          </motion.div> */}
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4">
             Meet Our Professionals
@@ -81,8 +97,7 @@ const OurTeamSection: React.FC = () => {
   );
 };
 
-export default OurTeamSection;
-
+export default Team;
 
 // import React from "react";
 // import { motion } from "framer-motion";
@@ -93,7 +108,7 @@ export default OurTeamSection;
 //     { src: "/images/ahmed.jpg", name: "Ahmed Ali" },
 //     { src: "/images/ameen.jpg", name: "Ameen Buzidi" },
 //     { src: "/images/awab.jpg", name: "Awab Shoukat" },
-    
+
 //   ];
 
 //   return (
@@ -171,7 +186,6 @@ export default OurTeamSection;
 
 // export default OurTeamSection;
 
-
 // import React from "react";
 // import { motion } from "framer-motion";
 
@@ -239,8 +253,7 @@ export default OurTeamSection;
 //                 alt={`Team member ${index + 1}`}
 //                 className="w-full h-full object-cover rounded-xl shadow-md"
 //               />
-                
-            
+
 //             </div>
 //           ))}
 //         </motion.div>
@@ -250,4 +263,3 @@ export default OurTeamSection;
 // };
 
 // export default OurTeamSection;
-

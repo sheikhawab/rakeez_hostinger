@@ -59,7 +59,7 @@ export const ServicesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div
+          {/* <motion.div
             className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-4"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -69,7 +69,7 @@ export const ServicesSection = () => {
             <span className="text-primary-700 font-semibold text-sm">
               {t('services.title')}
             </span>
-          </motion.div>
+          </motion.div> */}
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4">
             {t('services.subtitle')}
