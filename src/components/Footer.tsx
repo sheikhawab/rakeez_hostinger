@@ -196,6 +196,7 @@ export const Footer = () => {
       target.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
 
   const quickLinks = [
     { label: t("nav.home"), href: "#home" },
@@ -223,7 +224,9 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-orange-500 text-white pt-20 pb-10 overflow-hidden">
+    // <footer className="relative bg-orange-500 text-white pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-gradient-to-r from-primary-500 to-primary-600 text-white pt-20 pb-10 overflow-hidden">
+
       <div className="absolute inset-0 opacity-20"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -295,7 +298,7 @@ export const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-xl flex items-center justify-center bg-orange-700/30 hover:bg-amber-500/80 border border-amber-400/40 transition-all"
+                  className="w-11 h-11 rounded-xl flex items-center justify-center  transition-all"
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.name}
@@ -310,16 +313,16 @@ export const Footer = () => {
                 <span className="text-amber-400">✉</span>
                 <a
                   href="mailto:it@rakeezsolutions.sa"
-                  className="hover:text-amber-400 transition-colors"
+                  className="text-white hover:text-amber-950 transition-colors"
                 >
                   it@rakeezsolutions.sa
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <span className="text-amber-400">📞</span>
+                <span>📞</span>
                 <a
                   href="tel:+966536499916"
-                  className="hover:text-amber-400 transition-colors"
+                  className="text-white hover:text-amber-950 transition-colors"
                 >
                   +966 536499916
                 </a>

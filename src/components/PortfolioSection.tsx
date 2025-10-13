@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { PortfolioCart } from './PortfolioCart';
 
 // import pictures from public folder
-import Technology from "../assets/Technology_in_Daily_Life.webp";
+import Technology from "../../public/portfolio/e-commerce.png";
 import fooddelovery from "../assets/food delovery.png";
-import hospital from "../assets/hospital.webp";
-import system from "../assets/system desing.jpg";
+import hospital from "../../public/portfolio/health.jpg";
+import system from "../../public/portfolio/designnn.png";
 import saas from "../assets/saas.jpg";
-import financial from "../assets/financial.jpg";
+import financial from "../../public/portfolio/finance.png";
 
 export const PortfolioSection = () => {
   const { t } = useTranslation();

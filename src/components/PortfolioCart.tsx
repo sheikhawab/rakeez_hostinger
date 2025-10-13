@@ -28,7 +28,7 @@ export function PortfolioCart({
       {/* 🔶 Main Card Container */}
       <CardContainer className="inter-var">
         <CardBody
-          className="bg-white dark:bg-neutral-900 border border-amber-200
+          className="bg-white  border border-amber-200
           rounded-2xl shadow-sm hover:shadow-lg hover:shadow-orange-200
           transition-all duration-500 flex flex-col overflow-hidden min-h-[560px] sm:min-h-[580px]"
         >
