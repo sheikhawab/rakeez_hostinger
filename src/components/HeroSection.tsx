@@ -58,7 +58,7 @@ export const HeroSection = () => {
           >
             {t('hero.title').split(' ').slice(0, 1).join(' ')}{' '}
             <TextHighlight className="text-primary-500">
-              {isRTL ? 'الرقمي' : 'Digital'}
+              {isRTL ? 'رقمية' : 'Digital'}
             </TextHighlight>{' '}
             <br className="hidden md:block" />
             {isRTL ? (
