@@ -7,7 +7,7 @@ interface LogoProps {
   height?: number;
 }
 
-export const Logo = ({ className = '', animate = false, width = 36, height = 36 }: LogoProps) => {
+export const Logo = ({ className = '',  width = 36, height = 36 }: LogoProps) => {
   return (
     <motion.img
       src="\public\logo as svg.svg"  // Public folder se logo image
