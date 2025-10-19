@@ -148,7 +148,7 @@ export const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl md:text-3xl font-bold text-primary-600">150+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary-600">500+</div>
                   <div className="text-xs md:text-sm text-secondary-600 font-medium leading-tight">Completed<br/>Projects</div>
                 </div>
               </motion.div>
@@ -176,7 +176,7 @@ export const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl md:text-3xl font-bold text-white">5+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white">15+</div>
                   <div className="text-xs md:text-sm text-white/90 font-medium leading-tight">Years<br/>Experience</div>
                 </div>
               </motion.div>

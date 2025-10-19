@@ -21,7 +21,7 @@ export const ServicesSection = () => {
     {
       icon: '💰',
       titleKey: 'financialConsulting', // lowercase camelCase
-      features: ['transformation', 'strategy', 'businessAnalysis'],
+      features: ['Transformation', 'Strategy', 'businessAnalysis'], // Use correct feature keys
       slug: 'financial-consulting',
     },
     {

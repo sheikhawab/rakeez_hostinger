@@ -6,10 +6,10 @@ import { PortfolioCart } from './PortfolioCart';
 
 // import pictures from public folder
 import Technology from "../../public/portfolio/e-commerce.png";
-import fooddelovery from "../assets/food delovery.png";
+import fooddelovery from "../../public/portfolio/food delovery.jpeg";
 import hospital from "../../public/portfolio/health.jpg";
 import system from "../../public/portfolio/designnn.png";
-import saas from "../assets/saas.jpg";
+import saas from "../../public/portfolio/saas platform.jpeg";
 import financial from "../../public/portfolio/finance.png";
 
 export const PortfolioSection = () => {

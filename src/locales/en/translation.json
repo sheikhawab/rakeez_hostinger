@@ -327,6 +327,7 @@
   },
   
   "pricing": {
+    
     "title": "Choose the right plan for you",
     "subtitle": "Affordable plans packed with the best features for your audience and growth.",
     "button": "Get started today",
@@ -374,7 +375,12 @@
         "Mobile & tablet optimized design"
       ]
     }
+  },"team": {
+    "title": "Meet Our Professionals",
+    "description": "A team of creative minds and technical experts working together to build modern web solutions."
   }
+
+
 }
 
 

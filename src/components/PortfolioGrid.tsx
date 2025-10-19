@@ -7,7 +7,8 @@ import picture from "../../public/Technology_in_Daily_Life.webp";
 import fooddelovery from "../../public/food delovery.png";
 import hospital from "../../public/hospital.webp";
 import system from "../../public/system desing.jpg";
-import saas from "../../public/saas.jpg";
+import saas from "../../public/portfolio/saas platform.jpeg";
+
 import financial from "../../public/financial.jpg";
 
 import { PortfolioCart } from "./PortfolioCart";

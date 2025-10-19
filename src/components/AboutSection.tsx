@@ -31,8 +31,8 @@ export const AboutSection = () => {
   // ];
 
   const stats = [
-    { value: 150, suffix: '+', label: t('about.stats.projects') },
-    { value: 80, suffix: '+', label: t('about.stats.clients') },
+    { value: 500, suffix: '+', label: t('about.stats.projects') },
+    { value: 280, suffix: '+', label: t('about.stats.clients') },
     { value: 15, suffix: '+', label: t('about.stats.years') },
     { value: 98, suffix: '%', label: t('about.stats.satisfaction') },
   ];
