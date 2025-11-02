@@ -375,13 +375,36 @@
         "Mobile & tablet optimized design"
       ]
     }
-  },"team": {
+  },
+  "team": {
     "title": "Meet Our Professionals",
-    "description": "A team of creative minds and technical experts working together to build modern web solutions."
+    "description": "A team of creative minds and technical experts working together to build modern web solutions.",
+    "abuhassan": {
+      "name": "Mr. Ezz El-Din Abu Radwan",
+      "designation": "CEO & Financial Consultant"
+    },
+    "talaal": {
+      "name": "Talal Al-Mutairi",
+      "designation": "Company President"
+    },
+    "ahmed": {
+      "name": "Ahmed Ali",
+      "designation": "Software Engineer"
+    },
+    "ameen": {
+      "name": "Amine Bouzidi",
+      "designation": "Digital Marketing Manager"
+    },
+    "awab": {
+      "name": "Awab Shoukat",
+      "designation": "Software Engineer"
+    }
   }
-
-
 }
+
+
+
+
 
 
   

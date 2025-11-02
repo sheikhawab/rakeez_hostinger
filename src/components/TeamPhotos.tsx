@@ -3,32 +3,33 @@ import { t } from "i18next";
 
 const OurTeamSection: React.FC = () => {
   const teamMembers = [
-    {
-      src: "/images/abuhassan.jpg",
-      name: "Mr. Ezz El-Din Abu Radwan",
-      designation: "CEO & Financial Consultant",
-    },
-    {
-      src: "/images/talaal.jpg",
-      name: "Abu Talaal",
-      designation: "Managing Partner",
-    },
-    {
-      src: "/images/ahmed.jpg",
-      name: "Ahmed Ali",
-      designation: "Software Engineer",
-    },
-    {
-      src: "/images/ameen.png",
-      name: "Amine Bouzidi",
-      designation: "Digital Marketing Manager",
-    },
-    {
-      src: "/images/awab.jpg",
-      name: "Awab Shoukat",
-      designation: "Software Engineer",
-    },
-  ];
+  {
+    src: "/images/abuhassan.jpg",
+    name: t("team.abuhassan.name"),
+    designation: t("team.abuhassan.designation"),
+  },
+  {
+    src: "/images/talaal.jpg",
+    name: t("team.talaal.name"),
+    designation: t("team.talaal.designation"),
+  },
+  {
+    src: "/images/ahmed.jpg",
+    name: t("team.ahmed.name"),
+    designation: t("team.ahmed.designation"),
+  },
+  {
+    src: "/images/ameen.png",
+    name: t("team.ameen.name"),
+    designation: t("team.ameen.designation"),
+  },
+  {
+    src: "/images/awab.jpg",
+    name: t("team.awab.name"),
+    designation: t("team.awab.designation"),
+  },
+];
+
 
   return (
     <section id="our-team" className="relative bg-white overflow-hidden py-16 sm:py-20">
