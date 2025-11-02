@@ -9,6 +9,11 @@ const OurTeamSection: React.FC = () => {
       designation: "CEO & Financial Consultant",
     },
     {
+      src: "/images/talaal.jpg",
+      name: "Abu Talaal",
+      designation: "Managing Partner",
+    },
+    {
       src: "/images/ahmed.jpg",
       name: "Ahmed Ali",
       designation: "Software Engineer",
