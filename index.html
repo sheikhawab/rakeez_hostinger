@@ -1,14 +1,153 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- ✅ Charset & Viewport -->
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/png" href="/landinglogo-rakeez" /> -->
-    <link rel="icon" type="image/png" href="public/rakeez.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!-- for gogole search analytics -->
+
+    <!-- ✅ Favicon -->
+     <link rel="icon" type="image/png" href="public/rakeez.png" />
+
+    <!-- ✅ Google Site Verification -->
     <meta name="google-site-verification" content="vtMBZ1rgHMEfbWzhkM1V6GiRyYgPLxn1Laco4_TaKOw" />
-    <title>rakeez-web</title>
+
+    <!-- ✅ Page Title -->
+    <title>Rakeez Solutions | Website & App Development in Riyadh</title>
+
+    <!-- ✅ Description -->
+    <meta
+      name="description"
+      content="Rakeez Solutions offers professional website design, app development, and IT solutions across Saudi Arabia. Let's build your digital presence today!"
+    />
+
+    <!-- ✅ Keywords -->
+    <meta
+      name="keywords"
+      content="website development, IT company, Saudi Arabia, web design, mobile apps, Riyadh, Jeddah, Damman"
+    />
+
+    <!-- ✅ Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- ✅ Canonical -->
+    <link rel="canonical" href="https://rakeezsolutions.sa/" />
+
+    <!-- ✅ Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Rakeez Solutions | Website & App Development in Saudi Arabia"
+    />
+    <meta
+      property="og:description"
+      content="Professional web design & IT solutions in Riyadh and Jeddah."
+    />
+    <meta property="og:url" content="https://rakeezsolutions.sa/" />
+    <meta property="og:site_name" content="Rakeez Solutions" />
+    <meta property="og:image" content="https://rakeezsolutions.sa/logo.jpg" />
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Rakeez Solutions | IT & Web Development Company"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional website & app development in Saudi Arabia."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rakeezsolutions.sa/twitter-image.jpg"
+    />
+
+    <!-- ✅ Arabic SEO Meta -->
+    <meta
+      name="description"
+      lang="ar"
+      content="شركة ركــيــز لتصميم وتطوير المواقع والتطبيقات في السعودية."
+    />
+    <meta
+      name="keywords"
+      lang="ar"
+      content="تصميم مواقع, تطوير تطبيقات, شركة تصميم مواقع, السعودية, الرياض"
+    />
+
+    <!-- ✅ Structured Data (Organization Schema) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Rakeez Solutions",
+        "url": "https://rakeezsolutions.sa",
+        "logo": "https://rakeezsolutions.sa/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+966536499916",
+          "contactType": "customer service",
+          "areaServed": "SA"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Riyadh",
+          "addressCountry": "Saudi Arabia"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/rakeezsolutions",
+          "https://www.instagram.com/rakeez_solutions/",
+          "https://www.facebook.com/people/Rakeez-Solutions/61581383070987/",
+          "https://www.tiktok.com/@rakeezconsultations",
+          "https://x.com/RakeezSolutions",
+          "https://www.snapchat.com/add/rakeezsolutions?share_id=VCa8jhfFgvU&locale=en-US"
+        ]
+      }
+    </script>
+
+    <!-- ✅ Structured Data (LocalBusiness Schema) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Rakeez Solutions",
+        "image": "https://rakeezsolutions.sa/logo.png",
+        "url": "https://rakeezsolutions.sa",
+        "telephone": "+966536499916",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Riyadh",
+          "addressCountry": "Saudi Arabia"
+        }
+      }
+    </script>
+
+    <!-- ✅ Structured Data (Website Schema for SearchAction) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Rakeez Solutions",
+        "url": "https://rakeezsolutions.sa",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://rakeezsolutions.sa/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- ✅ Google Analytics   abhi nhi banya hai ban kr dalta hoon -->    
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWB52VFD0B"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-TWB52VFD0B');
+        </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -55,13 +55,18 @@ export default function PricingSection() {
       id="pricing"
       dir={i18n.dir()}
       className="relative isolate bg-white px-6 pt-24 sm:py-32 lg:px-12 transition-all duration-500"
+      itemScope itemType="https://schema.org/Product"
     >
       {/* 🔶 Header Section */}
       <div className="mx-auto max-w-6xl text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
+        itemProp="name"  // for SEO
+        >
           {t("pricing.title", "Choose the right plan for you")}
         </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-600">
+        <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-600"
+        itemProp="description"  // for SEO 
+        >
           {t(
             "pricing.subtitle",
             "Affordable plans packed with the best features for your audience and growth."
@@ -154,6 +159,42 @@ export default function PricingSection() {
           );
         })}
       </div>
+      <script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Website & App Development Plans",
+    "brand": {
+      "@type": "Organization",
+      "name": "Rakeez Solutions"
+    },
+    "description": "Affordable web and app development packages for businesses in Saudi Arabia.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "priceCurrency": "SAR",
+        "price": "1999",
+        "availability": "https://schema.org/InStock",
+        "url": "https://rakeezsolutions.sa/#contact"
+      },
+      {
+        "@type": "Offer",
+        "priceCurrency": "SAR",
+        "price": "4999",
+        "availability": "https://schema.org/InStock",
+        "url": "https://rakeezsolutions.sa/#contact"
+      },
+      {
+        "@type": "Offer",
+        "priceCurrency": "SAR",
+        "price": "10000",
+        "availability": "https://schema.org/InStock",
+        "url": "https://rakeezsolutions.sa/#contact"
+      }
+    ]
+  })}
+</script>
+
     </section>
   );
 }

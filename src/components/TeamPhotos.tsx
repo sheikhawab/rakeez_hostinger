@@ -32,7 +32,10 @@ const OurTeamSection: React.FC = () => {
 
 
   return (
-    <section id="our-team" className="relative bg-white overflow-hidden py-16 sm:py-20">
+    <section id="our-team" 
+    className="relative bg-white overflow-hidden py-16 sm:py-20"
+    itemScope itemType="https://schema.org/Organization"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
 
@@ -77,6 +80,7 @@ const OurTeamSection: React.FC = () => {
         >
           {teamMembers.map(({ src, name, designation }, index) => (
             <motion.div
+              itemScope itemType="https://schema.org/Person"  // seo
               key={index}
               className="relative group w-full max-w-[260px] sm:max-w-[280px] md:max-w-[300px] transition-transform duration-500 hover:scale-105"
               whileHover={{ scale: 1.08 }}
@@ -87,15 +91,20 @@ const OurTeamSection: React.FC = () => {
                   src={src}
                   alt={name}
                   className="w-full h-[280px] sm:h-[300px] md:h-[320px] object-cover rounded-xl"
+                  itemProp="image"  // seo
                 />
               </div>
 
               {/* Name + Designation */}
               <div className="bg-orange-100 rounded-b-xl shadow-sm px-3 py-3 text-center w-full -mt-1">
-                <h3 className="text-black font-semibold text-base sm:text-lg">
+                <h3 className="text-black font-semibold text-base sm:text-lg"
+                 itemProp="name"
+                >
                   {name}
                 </h3>
-                <p className="text-gray-500 text-sm sm:text-base">
+                <p className="text-gray-500 text-sm sm:text-base"
+                 itemProp="jobTitle"
+                 >
                   {designation}
                 </p>
               </div>
@@ -103,6 +112,25 @@ const OurTeamSection: React.FC = () => {
           ))}
         </motion.div>
       </div>
+      <script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Awab Sheikh",
+    "jobTitle": "FullStack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Rakeez Solutions"
+    },
+    "url": "https://rakeezsolutions.sa",
+    "image": "https://rakeezsolutions.sa/images/awab.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/awab-sheikh",
+      "https://x.com/RakeezSolutions"
+    ]
+  })}
+</script>
+
     </section>
   );
 };

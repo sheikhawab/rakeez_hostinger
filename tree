@@ -1,9 +1,105 @@
 Rakeez_web                              
-├─ public                               
+├─ dist                                 
+│  ├─ assets                            
+│  │  ├─ designnn-Cu_BNrUJ.png          
+│  │  ├─ e-commerce-DU7wFaz6.png        
+│  │  ├─ finance--V4L9CfS.png           
+│  │  ├─ food delovery-CI6byUIf.jpeg    
+│  │  ├─ health-DXOzo2xr.jpg            
+│  │  ├─ index-B_WzZbcB.css             
+│  │  ├─ index-DXq1eGR_.js              
+│  │  ├─ rakeez-Lkjxik-2.png            
+│  │  └─ saas platform-N8zxZVKZ.jpeg    
+│  ├─ clients                           
+│  │  ├─ admin-ajax (1)-modified.png    
+│  │  ├─ admin-ajax (2)-modified.png    
+│  │  ├─ admin-ajax (3)-modified.png    
+│  │  ├─ admin-ajax (4)-modified.png    
+│  │  ├─ admin-ajax (5)-modified.png    
+│  │  ├─ admin-ajax (6)-modified.png    
+│  │  └─ admin-ajax-modified.png        
+│  ├─ flag                              
+│  │  ├─ saudi.svg                      
+│  │  └─ usa.svg                        
+│  ├─ images                            
+│  │  ├─ aameen.jpg                     
+│  │  ├─ abuhassan.jpg                  
+│  │  ├─ ahmed.jpg                      
+│  │  ├─ ameen.png                      
+│  │  ├─ ameen2.jpg                     
+│  │  ├─ awab.jpg                       
+│  │  └─ talaal.jpg                     
+│  ├─ logos                             
+│  │  ├─ aws.svg                        
+│  │  ├─ docker.svg                     
+│  │  ├─ mongodb.svg                    
+│  │  ├─ nodejs.svg                     
+│  │  ├─ postgresql.svg                 
+│  │  ├─ python.svg                     
+│  │  ├─ react.svg                      
+│  │  └─ typescript.svg                 
+│  ├─ portfolio                         
+│  │  ├─ designnn.png                   
+│  │  ├─ e-commerce.png                 
+│  │  ├─ finance.png                    
+│  │  ├─ food delovery.jpeg             
+│  │  ├─ health.jpg                     
+│  │  └─ saas platform.jpeg             
+│  ├─ hero-dashboard.jpg.png            
+│  ├─ index.html                        
 │  ├─ landinglogo-removebg-preview.png  
 │  ├─ landinglogo.jpg                   
+│  ├─ logo as svg.svg                   
+│  ├─ logo jpg.jpg                      
 │  ├─ rakeez.png                        
 │  ├─ rakeezmacbookdemo.jpg             
+│  └─ vite.svg                          
+├─ public                               
+│  ├─ clients                           
+│  │  ├─ admin-ajax (1)-modified.png    
+│  │  ├─ admin-ajax (2)-modified.png    
+│  │  ├─ admin-ajax (3)-modified.png    
+│  │  ├─ admin-ajax (4)-modified.png    
+│  │  ├─ admin-ajax (5)-modified.png    
+│  │  ├─ admin-ajax (6)-modified.png    
+│  │  └─ admin-ajax-modified.png        
+│  ├─ flag                              
+│  │  ├─ saudi.svg                      
+│  │  └─ usa.svg                        
+│  ├─ images                            
+│  │  ├─ aameen.jpg                     
+│  │  ├─ abuhassan.jpg                  
+│  │  ├─ ahmed.jpg                      
+│  │  ├─ ameen.png                      
+│  │  ├─ ameen2.jpg                     
+│  │  ├─ awab.jpg                       
+│  │  └─ talaal.jpg                     
+│  ├─ logos                             
+│  │  ├─ aws.svg                        
+│  │  ├─ docker.svg                     
+│  │  ├─ mongodb.svg                    
+│  │  ├─ nodejs.svg                     
+│  │  ├─ postgresql.svg                 
+│  │  ├─ python.svg                     
+│  │  ├─ react.svg                      
+│  │  └─ typescript.svg                 
+│  ├─ portfolio                         
+│  │  ├─ designnn.png                   
+│  │  ├─ e-commerce.png                 
+│  │  ├─ finance.png                    
+│  │  ├─ food delovery.jpeg             
+│  │  ├─ health.jpg                     
+│  │  └─ saas platform.jpeg             
+│  ├─ hero-dashboard.jpg.png            
+│  ├─ index.html                        
+│  ├─ landinglogo-removebg-preview.png  
+│  ├─ landinglogo.jpg                   
+│  ├─ logo as svg.svg                   
+│  ├─ logo jpg.jpg                      
+│  ├─ rakeez.png                        
+│  ├─ rakeezmacbookdemo.jpg             
+│  ├─ robots.txt                        
+│  ├─ sitemap.xml                       
 │  └─ vite.svg                          
 ├─ src                                  
 │  ├─ assets                            
@@ -12,6 +108,7 @@ Rakeez_web
 │  │  ├─ hospital.webp                  
 │  │  ├─ landinglogo.jpg                
 │  │  ├─ saas.jpg                       
+│  │  ├─ social media.png               
 │  │  ├─ system desing.jpg              
 │  │  ├─ Technology_in_Daily_Life.webp  
 │  │  ├─ whatsapp.svg                   
@@ -36,6 +133,7 @@ Rakeez_web
 │  │  │  └─ Timeline.tsx                
 │  │  ├─ AboutSection.tsx               
 │  │  ├─ Background.tsx                 
+│  │  ├─ ClientsSection.tsx             
 │  │  ├─ ContactSection.tsx             
 │  │  ├─ Faq.tsx                        
 │  │  ├─ FeaturesSection.tsx            
@@ -48,14 +146,15 @@ Rakeez_web
 │  │  ├─ MacbookScrollDemo.tsx          
 │  │  ├─ MainLayout.tsx                 
 │  │  ├─ MobileMenu.tsx                 
-│  │  ├─ Pictures.tsx                   
 │  │  ├─ PortfolioCart.tsx              
 │  │  ├─ PortfolioGrid.tsx              
 │  │  ├─ PortfolioSection.tsx           
+│  │  ├─ Price.tsx                      
 │  │  ├─ ProjectCard.tsx                
 │  │  ├─ ServiceCard.tsx                
 │  │  ├─ ServicesSection.tsx            
-│  │  ├─ TeamMembes.tsx                 
+│  │  ├─ TeamPhotos.tsx                 
+│  │  ├─ TechnologiesSection.tsx        
 │  │  ├─ TestimonialsSection.tsx        
 │  │  └─ WhatsApp.tsx                   
 │  ├─ lib                               
@@ -69,6 +168,7 @@ Rakeez_web
 │  │  └─ en.json                        
 │  ├─ App.css                           
 │  ├─ App.tsx                           
+│  ├─ declarations.d.ts                 
 │  ├─ i18n.ts                           
 │  ├─ index.css                         
 │  └─ main.tsx                          

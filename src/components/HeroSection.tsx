@@ -32,7 +32,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-secondary-50 to-primary-50/30 w-full">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-secondary-50 to-primary-50/30 w-full pt-20">
       {/* Spotlight Effect */}
       <Spotlight className="top-0 left-1/4 w-[800px] h-[800px]" />
       <Spotlight className="top-1/2 right-1/4 w-[600px] h-[600px]" fill="#D97706" />
@@ -53,6 +53,30 @@ export const HeroSection = () => {
         >
           {/* Main Headline */}
           <motion.h1
+  className="text-5xl md:text-7xl lg:text-8xl font-bold text-secondary-900 mb-6 leading-tight"
+  variants={itemVariants}
+>
+  {isRTL ? (
+    // 🇸🇦 Arabic Version
+    <>
+      <TextHighlight className="text-primary-500">شركة ركـيـز</TextHighlight>{' '}
+      لتصميم وتطوير{' '}
+      <TextHighlight className="text-primary-500">المواقع</TextHighlight>{' '}
+      والتطبيقات في{' '}
+      <TextHighlight className="text-primary-500">السعودية</TextHighlight>
+    </>
+  ) : (
+    // 🇬🇧 English Version
+        <>
+      Fueling Your <TextHighlight className="text-primary-500">Business Growth</TextHighlight>
+      <br className="hidden md:block" />
+      Through Cutting-Edge <TextHighlight className="text-primary-500">Web & App </TextHighlight> Solutions.
+    </>
+  )}
+</motion.h1>
+
+
+          {/* <motion.h1
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-secondary-900 mb-6"
             variants={itemVariants}
           >
@@ -72,7 +96,7 @@ export const HeroSection = () => {
                 <TextHighlight className="text-primary-500">Transform</TextHighlight> Your Business
               </>
             )}
-          </motion.h1>
+          </motion.h1> */}
 
           {/* CTA Button */}
           <motion.div

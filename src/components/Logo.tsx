@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import logo from "../../public/logo.transparent.png"
 interface LogoProps {
   className?: string;
   animate?: boolean;
@@ -10,8 +10,8 @@ interface LogoProps {
 export const Logo = ({ className = '',  width = 36, height = 36 }: LogoProps) => {
   return (
     <motion.img
-      src="\public\logo as svg.svg"  // Public folder se logo image
-      alt="Logo"
+      src= {logo}   // Public folder se logo image
+      alt="Rakeez Solutions Logo"
       className={className}
       width={width}  // Default width
       height={height}  // Default height
