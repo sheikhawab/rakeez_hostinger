@@ -17,7 +17,7 @@ const faqData = [
   { qKey: "faq.q10", aKey: "faq.a10" },
 ];
 
-export const Faq = () => {
+export default function Faq() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 

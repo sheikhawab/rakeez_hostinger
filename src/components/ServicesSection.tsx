@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ServiceCard } from './ServiceCard';
 
-export const ServicesSection = () => {
+export default function ServicesSection() {
   const { t } = useTranslation();
 
   const services = [

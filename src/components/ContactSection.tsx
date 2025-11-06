@@ -499,7 +499,7 @@ import { useTranslation } from "react-i18next";
 import { FloatingLabelInput } from "./ui/FloatingLabelInput";
 import emailjs from "@emailjs/browser";
 
-export const ContactSection = () => {
+export default function ContactSection() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",

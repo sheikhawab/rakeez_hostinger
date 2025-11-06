@@ -4,7 +4,7 @@ import { Spotlight } from './ui/Spotlight';
 import { TextHighlight } from './ui/TextHighlight';
 import { FloatingElements } from './ui/FloatingElements';
 
-export const HeroSection = () => {
+export default function HeroSection() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
 

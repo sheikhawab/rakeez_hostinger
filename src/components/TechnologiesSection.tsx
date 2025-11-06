@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export const TechnologiesSection = () => {
+export default function TechnologiesSection() {
  
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -4,7 +4,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 // import { Timeline } from './ui/Timeline';
 import { StatsCounter } from './ui/StatsCounter';
 
-export const AboutSection = () => {
+export default function AboutSection() {
   const { t } = useTranslation();
 
   // const timelineItems = [

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 
-export const ClientsSection = () => {
+export default function ClientsSection() {
  
 
   const clients = [

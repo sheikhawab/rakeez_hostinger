@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid';
 
-export const FeaturesSection = () => {
+export default function FeaturesSection() {
   const { t } = useTranslation();
 
   const features = [

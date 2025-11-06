@@ -6,7 +6,7 @@
 
   
 
-  export const PortfolioSection = () => {
+  export default function PortfolioSection() {
     const { t } = useTranslation();
     const [activeFilter, setActiveFilter] = useState('all');
     const [showMore] = useState(false);
