@@ -56,7 +56,7 @@ export const Header = () => {
       >
         <nav 
          aria-label="Main navigation"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="relative flex items-center justify-between">
             {/* Logo with fixed size */}
             <Link to="/"
@@ -67,7 +67,12 @@ export const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Logo className="absolute w-32 h-32" width={128} height={128}/>
+                <Logo 
+                // className="absolute w-32 h-32" width={128} height={128}
+                  className="absolute"
+                  width={128}
+                  height={112} // maintain ratio
+                />
                 <div className="flex flex-col ml-36">
                   <span className="text-lg font-bold text-secondary-900 leading-tight">
                     {t('hero.title')}

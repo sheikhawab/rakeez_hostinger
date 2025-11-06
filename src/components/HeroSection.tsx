@@ -32,7 +32,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-secondary-50 to-primary-50/30 w-full pt-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-secondary-50 to-primary-50/30 w-full pt-16">
       {/* Spotlight Effect */}
       <Spotlight className="top-0 left-1/4 w-[800px] h-[800px]" />
       <Spotlight className="top-1/2 right-1/4 w-[600px] h-[600px]" fill="#D97706" />
@@ -141,9 +141,11 @@ export const HeroSection = () => {
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
                 <img
-                  src="/hero-dashboard.jpg.png"
+                  src="/hero-dashboard.webp"
                   alt="Dashboard Preview"
+                  loading='lazy'
                   className="w-full h-auto object-cover"
+                   
                 />
 
                 {/* Bottom Fade Overlay Effect - Darker */}

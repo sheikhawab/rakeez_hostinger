@@ -27,13 +27,19 @@ export function PortfolioCart({
     <>
       {/* 🔶 Main Card Container */}
       <CardContainer className="inter-var">
-        <CardBody
+        {/* <CardBody
           // 🛠️ FIX: Added dark mode background + reduced shadow for better visibility on mobile
           className="bg-white  border border-amber-200
           rounded-2xl shadow-sm hover:shadow-lg hover:shadow-orange-200
           transition-all duration-500 flex flex-col overflow-hidden
           min-h-[520px] sm:min-h-[560px]"
-        >
+        > */}
+        <CardBody
+  className="bg-white border border-amber-200 rounded-2xl shadow-sm hover:shadow-lg hover:shadow-orange-200
+  transition-all duration-500 flex flex-col overflow-hidden
+  min-h-[520px] sm:min-h-[560px] w-[90vw] sm:w-[320px] md:w-[360px]"
+>
+
           {/* 🔶 Image Section */}
           <div
             className="relative w-full h-48 sm:h-60 overflow-hidden rounded-t-2xl group"
