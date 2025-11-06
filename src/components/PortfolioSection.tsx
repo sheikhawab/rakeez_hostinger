@@ -4,6 +4,12 @@
   // import { ProjectCard } from './ProjectCard';
   import { PortfolioCart } from './PortfolioCart';
 
+  import design from '../assets/portfolio/designnn.webp'
+  import ecommerce from '../assets/portfolio/e-commerce.webp'
+  import finance from '../assets/portfolio/finance.webp'
+  import food from '../assets/portfolio/food delovery.webp'
+  import health from '../assets/portfolio/health.webp'
+  import saas from '../assets/portfolio/saas platform.webp'
 
   export const PortfolioSection = () => {
     const { t } = useTranslation();
@@ -19,7 +25,7 @@
         pattern: 'gradient' as const,
         technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
         descriptionKey: 'portfolio.projects.ecommerce.description',
-        src:"/portfolio/e-commerce.webp",
+        src: ecommerce,
       },
       {
         id: 2,
@@ -29,7 +35,7 @@
         pattern: 'geometric' as const,
         technologies: ['React Native', 'Firebase', 'TypeScript', 'Redux'],
         descriptionKey: 'portfolio.projects.healthcare.description',
-        src: "/portfolio/health.webp",
+        src: health,
       },
       {
         id: 3,
@@ -39,7 +45,7 @@
         pattern: 'minimal' as const,
         technologies: ['Next.js', 'Python', 'PostgreSQL', 'D3.js'],
         descriptionKey: 'portfolio.projects.financial.description',
-        src: "/portfolio/finance.webp",
+        src: finance,
       },
       {
         id: 4,
@@ -49,7 +55,7 @@
         pattern: 'gradient' as const,
         technologies: ['Figma', 'React', 'Storybook', 'Tailwind CSS'],
         descriptionKey: 'portfolio.projects.designSystem.description',
-        src: "/portfolio/designnn.webp",
+        src: design,
       },
       {
         id: 5,
@@ -59,7 +65,7 @@
         pattern: 'geometric' as const,
         technologies: ['Flutter', 'Firebase', 'Google Maps', 'Stripe'],
         descriptionKey: 'portfolio.projects.foodDelivery.description',
-        src: "/portfolio/food delovery.webp",
+        src: food,
       },
       {
         id: 6,
@@ -69,7 +75,7 @@
         pattern: 'minimal' as const,
         technologies: ['Vue.js', 'Laravel', 'AWS', 'Docker', 'Redis'],
         descriptionKey: 'portfolio.projects.saas.description',
-        src: "/portfolio/saas platform.webp",
+        src: saas,
       },
     ];
 
