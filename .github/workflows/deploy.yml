@@ -1,9 +1,9 @@
-name: 🚀 Deploying Rakeez Web
+name: Deploy Rakeez Web
 
 on:
   push:
     branches:
-      - master  # Change to 'main' if your default branch is main
+      - main
 
 jobs:
   deploy:
@@ -27,30 +27,30 @@ jobs:
           npm ci
           npm run build
 
-      # 4️⃣ Upload 'dist' folder to EC2
-      - name: Upload build files to EC2
+      # 4️⃣ Upload 'dist' folder to VPS
+      - name: Upload build files to VPS
         uses: appleboy/scp-action@v0.1.6
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_KEY }}
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           source: "dist/"
-          target: "/home/ubuntu/rakeez-web"
+          target: "/tmp/rakeez-web"
 
-      # 5️⃣ SSH into EC2 and deploy
+      # 5️⃣ SSH into VPS and deploy
       - name: Deploy and restart Nginx
         uses: appleboy/ssh-action@v0.1.6
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_KEY }}
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            echo "🔹 Deploying new build to Nginx..."
+            echo "Deploying new build to Nginx..."
             # Make sure target folder exists
             sudo mkdir -p /var/www/html
             sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/rakeez-web/dist/* /var/www/html/
+            sudo cp -r /tmp/rakeez-web/dist/* /var/www/html/
             sudo chown -R www-data:www-data /var/www/html
             sudo chmod -R 755 /var/www/html
             sudo systemctl restart nginx
-            echo "✅ Deployment complete!"
+            echo "Deployment complete!"
