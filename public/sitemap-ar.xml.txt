@@ -1,0 +1,42 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Arabic Home -->
+  <url>
+    <loc>https://rakeezsolutions.sa/ar/</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Arabic Services -->
+  <url>
+    <loc>https://rakeezsolutions.sa/ar/services</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Arabic About -->
+  <url>
+    <loc>https://rakeezsolutions.sa/ar/about</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Arabic Portfolio -->
+  <url>
+    <loc>https://rakeezsolutions.sa/ar/portfolio</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Arabic Contact -->
+  <url>
+    <loc>https://rakeezsolutions.sa/ar/contact</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset> -->
