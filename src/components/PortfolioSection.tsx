@@ -14,11 +14,11 @@
     const projects = [
       {
         id: 1,
-        title: 'E-Commerce Platform',
+        title: 'E-Commerce Platform ',
         client: 'RetailCo',
-        category: t('portfolio.categories.webDev'),
+        categoryKey: 'webDev',
         pattern: 'gradient' as const,
-        technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
+        technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
         descriptionKey: 'portfolio.projects.ecommerce.description',
         src:"/portfolio/e-commerce.webp",
       },
@@ -26,7 +26,7 @@
         id: 2,
         title: 'Healthcare Mobile App',
         client: 'MedHealth',
-        category: t('portfolio.categories.mobile'),
+        categoryKey: 'mobile',
         pattern: 'geometric' as const,
         technologies: ['React Native', 'Firebase', 'TypeScript', 'Redux'],
         descriptionKey: 'portfolio.projects.healthcare.description',
@@ -36,7 +36,7 @@
         id: 3,
         title: 'Financial Dashboard',
         client: 'FinTech Solutions',
-        category: t('portfolio.categories.software'),
+        categoryKey: 'software',
         pattern: 'minimal' as const,
         technologies: ['Next.js', 'Python', 'PostgreSQL', 'D3.js'],
         descriptionKey: 'portfolio.projects.financial.description',
@@ -46,7 +46,7 @@
         id: 4,
         title: 'Design System',
         client: 'TechCorp',
-        category: t('portfolio.categories.uiux'),
+        categoryKey: 'uiux',
         pattern: 'gradient' as const,
         technologies: ['Figma', 'React', 'Storybook', 'Tailwind CSS'],
         descriptionKey: 'portfolio.projects.designSystem.description',
@@ -56,7 +56,7 @@
         id: 5,
         title: 'Food Delivery Platform',
         client: 'FoodHub',
-        category: t('portfolio.categories.mobile'),
+        categoryKey: 'mobile',
         pattern: 'geometric' as const,
         technologies: ['Flutter', 'Firebase', 'Google Maps', 'Stripe'],
         descriptionKey: 'portfolio.projects.foodDelivery.description',
@@ -66,7 +66,7 @@
         id: 6,
         title: 'SaaS Platform',
         client: 'CloudSync',
-        category: t('portfolio.categories.software'),
+        categoryKey: 'software',
         pattern: 'minimal' as const,
         technologies: ['Vue.js', 'Laravel', 'AWS', 'Docker', 'Redis'],
         descriptionKey: 'portfolio.projects.saas.description',
@@ -82,12 +82,10 @@
       { key: 'uiux', label: t('portfolio.filters.uiux') },
     ];
 
-    const filteredProjects = activeFilter === 'all'
-      ? projects
-      : projects.filter(project => {
-          const filterLabel = categories.find(cat => cat.key === activeFilter)?.label;
-          return project.category === filterLabel;
-        });
+    const filteredProjects =
+      activeFilter === 'all'
+        ? projects
+        : projects.filter((project) => project.categoryKey === activeFilter);
 
     return (
       // py-24
@@ -100,22 +98,22 @@
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}  
           <motion.div
-            className="text-center mb-5"
+            className="text-center mb-6 sm:mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold tracking-tight text-secondary-900 mb-3 sm:mb-4">
               {t('portfolio.title')}
             </h2>
-            <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-secondary-600 max-w-3xl mx-auto">
               {t('portfolio.subtitle')}
             </p>
           </motion.div>
 
           {/* Filter Tabs - Elegant Design */}
           <motion.div
-            className="flex flex-wrap justify-center gap-2 mb-8"
+            className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-7 sm:mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -125,7 +123,7 @@
               <motion.button
                 key={category.key}
                 onClick={() => setActiveFilter(category.key)}
-                className={`relative px-6 py-2.5 font-medium transition-all duration-300 ${
+                className={`relative px-4 sm:px-6 py-2 text-sm sm:text-[0.95rem] font-medium tracking-wide transition-all duration-300 ${
                   activeFilter === category.key
                     ? 'text-primary-600'
                     : 'text-secondary-600 hover:text-secondary-900'
@@ -159,7 +157,7 @@
                   key={project.id || index} // 👈 ye add kar
                   title={project.title}
                   client={project.client}
-                  category={project.category}
+                  category={t(`portfolio.categories.${project.categoryKey}`)}
                   technologies={project.technologies}
                   image={project.src || ''} // agar image hai to pass karo, nahi to ''
                   descriptionKey={project.descriptionKey}
@@ -167,7 +165,7 @@
                   />
                   ))
                 }
-            </AnimatePresence>
+    </AnimatePresence>
           </motion.div>
 
           {/* Load More / View All Button */}

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function TechnologiesSection() {
+  const { t } = useTranslation();
  
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,11 +62,11 @@ export default function TechnologiesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-            Technologies We{' '}
-            <span className="text-primary-500">Master</span>
+            {t('technologies.titlePrefix')}{' '}
+            <span className="text-primary-500">{t('technologies.titleHighlight')}</span>
           </h2>
           <p className="text-lg md:text-xl text-secondary-600 max-w-2xl mx-auto">
-            Cutting-edge tools and technologies we use to build robust, scalable solutions
+            {t('technologies.subtitle')}
           </p>
         </motion.div>
 

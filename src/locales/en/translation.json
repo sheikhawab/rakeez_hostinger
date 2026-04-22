@@ -94,6 +94,16 @@
       "description": "Expert guidance on technology strategy, architecture decisions, and digital transformation."
     }
   },
+  "technologies": {
+    "titlePrefix": "Technologies We",
+    "titleHighlight": "Master",
+    "subtitle": "Cutting-edge tools and technologies we use to build robust, scalable solutions"
+  },
+  "clientsSection": {
+    "titlePrefix": "Trusted by",
+    "titleHighlight": "Industry Leaders",
+    "subtitle": "Partnering with innovative companies to deliver exceptional results"
+  },
   "about": {
     "title": "About Rakeez Solutions",
     "subtitle": "Building Digital Excellence Since Day One",
@@ -195,7 +205,7 @@
         "description": "Patient management system improving healthcare accessibility through telemedicine and smart scheduling"
       },
       "financial": {
-        "description": "Real-time analytics dashboard for data-driven financial decisions with advanced visualization"
+        "description": "Real-time analytics dashboard for data-driven financial decisions with advanced visualization for financial analysis"
       },
       "designSystem": {
         "description": "Comprehensive design system with reusable components, detailed documentation, and brand consistency"

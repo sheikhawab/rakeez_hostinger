@@ -23,7 +23,7 @@ export function PortfolioGrid() {
       client: "RetailCo",
       category: t("portfolio.categories.webDev"),
       //   pattern: 'gradient' as const,
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+      technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS",],
       descriptionKey: "portfolio.projects.ecommerce.description",
       image: picture,
     },
@@ -100,13 +100,13 @@ export function PortfolioGrid() {
   return (
     <div className="w-full">
       {/* Filters */}
-      <div className="flex gap-3 mb-6 justify-center">
+      <div className="flex gap-2 sm:gap-3 mb-6 justify-center">
         {categories.map((cat) => (
           <button
             key={cat.key}
             onClick={() => setActiveFilter(cat.key)}
-            className={`px-4 py-1 rounded-full border text-sm ${
-              activeFilter === cat.key ? "bg-black text-white" : "bg-gray-200"
+            className={`px-3 sm:px-4 py-1.5 rounded-full border text-xs sm:text-sm font-medium tracking-wide transition-colors ${
+              activeFilter === cat.key ? "bg-black text-white" : "bg-gray-200 text-secondary-700"
             }`}
           >
             {cat.label}

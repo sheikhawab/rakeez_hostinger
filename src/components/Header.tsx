@@ -45,7 +45,7 @@ export const Header = () => {
     <>
       <motion.header
         className={cn(
-          'fixed top-0 w-full z-40 transition-all duration-300',
+          'fixed top-0 w-full z-20 transition-all duration-300',
           isScrolled
             ? 'bg-white/95 backdrop-blur-xl shadow-sm border-b border-secondary-100'
             : 'bg-white/50 backdrop-blur-sm'
@@ -56,28 +56,29 @@ export const Header = () => {
       >
         <nav 
          aria-label="Main navigation"
-         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:-mb-6 lg:mt-0">
           <div className="relative flex items-center justify-between">
             {/* Logo with fixed size */}
             <Link to="/"
             aria-label="Rakeez Solutions Home"
             >
               <motion.div
-                className="flex items-center gap-3"
+                className="flex items-center gap-1.5 sm:gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Logo 
-                // className="absolute w-32 h-32" width={128} height={128}
-                  className="absolute"
-                  width={128}
-                  height={112} // maintain ratio
-                />
-                <div className="flex flex-col ml-36">
-                  <span className="text-lg font-bold text-secondary-900 leading-tight">
+                <div className="flex h-[78px] w-[92px] shrink-0 items-center justify-center overflow-visible sm:h-[90px] sm:w-[104px] lg:h-[112px] lg:w-[128px]">
+                  <Logo
+                    className="shrink-0 origin-center scale-[1.90] sm:scale-[1.35] lg:scale-[1.55]"
+                    width={138}
+                    height={112} // keep layout box, scale for larger visual logo
+                  />
+                </div>
+                <div className="flex min-w-0 flex-col">
+                  <span className="truncate text-base font-bold leading-tight text-secondary-900 sm:text-base lg:text-lg">
                     {t('hero.title')}
                   </span>
-                  <span className="text-xs text-primary-500 font-medium">
+                  <span className="hidden truncate text-xs font-medium leading-tight text-primary-500 sm:block">
                     {isRTL ? 'حلول رقمية' : 'Digital Solutions'}
                   </span>
                 </div>
@@ -110,7 +111,7 @@ export const Header = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden flex items-center gap-4">
+            <div className="lg:hidden flex items-center gap-2 sm:gap-4">
               <LanguageSwitch />
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

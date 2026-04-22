@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 
 export default function ClientsSection() {
- 
+  const { t } = useTranslation();
 
   const clients = [
     { name: 'Client 1', logo: '/clients/admin-ajax-modified.png' },
@@ -35,11 +36,11 @@ export default function ClientsSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-            Trusted by{' '}
-            <span className="text-primary-500">Industry Leaders</span>
+            {t('clientsSection.titlePrefix')}{' '}
+            <span className="text-primary-500">{t('clientsSection.titleHighlight')}</span>
           </h2>
           <p className="text-lg md:text-xl text-secondary-600 max-w-2xl mx-auto">
-            Partnering with innovative companies to deliver exceptional results
+            {t('clientsSection.subtitle')}
           </p>
         </motion.div>
       </div>
