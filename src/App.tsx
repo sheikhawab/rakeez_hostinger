@@ -13,6 +13,7 @@ const ClientsSection = lazy(() => import("./components/ClientsSection"));
 import "./App.css";
 const Faq = lazy(() => import("./components/Faq"));
 const WhatsAppFloating = lazy(() => import("./components/WhatsApp"));
+const VoiceWidget = lazy(() => import("./components/VoiceWidget"));
 const Team = lazy(() => import("./components/TeamPhotos"));
 const Price = lazy(() => import("./components/Price"));
 
@@ -80,6 +81,7 @@ function App() {
           <Price />
           <ContactSection />
           <WhatsAppFloating />
+          <VoiceWidget />
         </Suspense>
       </MainLayout>
     </>
