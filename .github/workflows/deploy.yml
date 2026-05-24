@@ -49,11 +49,10 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             echo "Deploying new build to Nginx..."
-            # Make sure target folder exists
-            sudo mkdir -p /var/www/html
-            sudo rm -rf /var/www/html/*
-            sudo cp -r /tmp/rakeez-web/dist/* /var/www/html/
-            sudo chown -R www-data:www-data /var/www/html
-            sudo chmod -R 755 /var/www/html
+            sudo mkdir -p /var/www/rakeez
+            sudo rm -rf /var/www/rakeez/*
+            sudo cp -r /tmp/rakeez-web/dist/* /var/www/rakeez/
+            sudo chown -R www-data:www-data /var/www/rakeez
+            sudo chmod -R 755 /var/www/rakeez
             sudo systemctl restart nginx
             echo "Deployment complete!"
